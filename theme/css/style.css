@@ -1,404 +1,223 @@
-/* Resets to avoid browser differences */
-
-body, button, div, fieldset, form, h1, h2, h3, input, label, li, p, pre, td, textarea, .typygmentdown {
-    margin: 0;
-    padding: 0;
-    text-align: justify;
-    font-family: Georgia, serif;
-    font-size: 100%;
-    line-height: 1.25;
-    letter-spacing: 0;
-    border: none;
-    background: none;
-}
-
-/* Overall page layout */
-
 body {
-    background: white;
-    color: black;
-    color: #303030;
+    padding-top: 70px;
 }
 
-@media screen {
-    body {
-        width: 700px;
-        margin: 20px auto;
-    }
+#sidebar .list-group, #sidebar .list-group-item {
+    background-color: transparent;
 }
 
-@media print {
-    body {
-        margin: 0 2em;
-    }
+/* for list-groups nested within a list-group-item, reset the bottom margin */
+.list-group-item > .list-group {
+    margin-bottom: 0px;
 }
 
-/* Headings */
-
-h1, h2, h3, h4, h5, h6, .info, .info p {
-    font-family: Times, serif;
-    font-weight: normal;
-    page-break-inside: avoid;
+/* for list-group-items nested within a list-group-item, reset the bottom
+   padding of the last item, b/c the containing item has paddimg already 
+ */
+.list-group-item .list-group-item:last-child {
+    padding-bottom: 0px;
 }
 
-h1 .caps, h2 .caps, h3 .caps {
-    letter-spacing: -.05em;
-}
-
-h1 {
-    font-family: Times, serif;
-    text-align: center;
-    font-size: 2.25em;
-    line-height: 1.111;
-    padding-right: 0.08em;
-    letter-spacing: -.07em;
-}
-
-h2 {
-    margin-top: 0.714em;
-    font-size: 1.75em;
-    line-height: 0.714;
-    letter-spacing: -.05em;
-}
-
-h3 {
-    margin-top: 0.926em;
-    font-size: 1.35em;
-    line-height: 0.926;
-    letter-spacing: -.03em;
-}
-
-h1 .dquo, h2 .dquo, h3 .dquo, h4 .dquo, h5 .dquo, h6 .dquo {
-    margin-left: -.4em;
-}
-
-.info, .info p {
-    text-align: center;
-    letter-spacing: -.03em;
-}
-
-.info p {
-    margin: 0;
-}
-
-.info img.g {
-    width: 24px;
-    height: 24px;
-    margin: -7px 0;
-}
-
-#home h2 a[href*="http://"] {
-    padding-right: 28px;
-    background: url("/static/link.png") right center no-repeat;
-}
-
-#home h2 a[href*="http://"]:visited {
-    padding-right: 28px;
-    background: url("/static/visited.png") right center no-repeat;
-}
-
-h2 + p.published {
-    float: right;
-    margin-top: -1.25em;
-}
-
-.copyright {
-    margin: 1.25em 0;
-}
-
-/* Page text */
-
-p, p[class] + p {
-    margin-top: 1.25em;
-    widows: 2;
-    orphans: 2;
-    text-indent: 0;
-    clear: left;
-}
-
-p + p {
-    text-indent: 1.5em;
-    margin-top: 0;
-}
-
-p ~ img {
-    display: block;
-    margin: 1.25em auto;
-}
-
-.caps {
-    letter-spacing: 0.1em;
-    font-size: 75%;
-}
-
-abbr {
-    border-bottom: 1px dotted black;
-}
-
-blockquote {
-    margin: 0 1em;
-    font-style: italic;
-    letter-spacing: -0.0625em;
-}
-
-blockquote em {
-    font-style: normal;
-    letter-spacing: 0;
-}
-
-div.image {
-    text-align: center;
-    margin: 1.25em 0;
-}
-
-img {
+.list-group-item {
     border: none;
 }
 
+.tag-0 {
+    font-size: 16pt;
+}
 
+.tag-1 {
+    font-size: 13pt;
+}
 
-.side {
-    position: absolute;
-    width: 150px;
+.tag-2 {
+    font-size: 10pt;
+}
+
+.tag-3 {
+    font-size: 8pt;
+}
+
+.tag-4 {
+    font-size: 6pt;
+}
+
+#aboutme {
+    padding-top: 0px;
+    padding-bottom: 5px;
+    -ms-word-break: normal;
+    word-break: normal;
+}
+
+#sidebar {
+    padding-top: 0px;
+    -ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+}
+
+#sidebar a {
+    color: inherit;
+}
+
+.icon-label {
+    margin-left: 10px;
+}
+
+/* Example for how to control spacing between icon and label in specific
+   lists in the sidebar. To change, override in your CUSTOM_CSS           */
+#sidebar #social i {
+    margin-right: 3px;
+}
+
+a, a:hover {
+    color: inherit;
+}
+
+.entry-content a {
+    text-decoration: none;
+    border-bottom: 1px dotted;
+}
+
+.entry-content a:hover {
+    text-decoration: none;
+    border-bottom: 1px solid;
+}
+
+.entry-content img {
+    max-width: 100%;
     height: auto;
-    margin-left: 710px;
 }
 
-.left.side {
-    margin-left: -160px;
+.entry-content figcaption, .caption {
+    font-size: small;
+    margin-bottom: 2px;
 }
 
-.right.side {
-    margin-left: 710px;
+.summary img {
+    max-width: 100%;
+    height: auto;
 }
 
-@media screen {
-    h1 a, h2 a, h3 a, .info a {
-        text-decoration: none;
-    }
 
-    a:link {
-        color: #85ac40;
-    }
-
-    a:visited {
-        color: #61883b;
-    }
-
-    ::selection {
-        background: #dcff9d;
-    }
-
-    ::-moz-selection {
-        background: #e2ffaf;
-    }
+.floatright, .align-right {
+    float: right;
 }
 
-@media print {
-    a {
-        color: inherit;
-        text-decoration: none;
-    }
-
-    abbr {
-        border-bottom: none;
-    }
+.floatleft, .align-left {
+    float: left;
 }
 
-/* Lists */
-
-ul, ol {
-    margin: 1.25em 0 1.25em -1.5em;
-    padding-left: 1.5em;
+.floatcenter, .align-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-ul ul, ul ol, ol ol, ol ul {
-    margin: 0;
+figure.floatright, .align-right {
+    margin-left: 4px;
 }
 
-ul li {
-    list-style: disc;
+figure.floatleft, .align-left {
+    margin-right: 4px;
 }
 
-li p {
-    margin: 0;
+figure.floatcenter, .align-center {
+    margin-bottom: 11px;
 }
 
-/* Code */
-
-pre {
-    margin-top: 1.47em;
-    font-family: Courier;
-    font-size: .85em;
-    line-height: 1.47;
-    overflow: visible;
+.highlighttable pre {
+    /* Removes bootstrap default margin-bottom */
+    margin-bottom: 0px;
 }
 
-code {
-    font-family: Courier;
-    font-size: .85em;
-    line-height: 1;
+.highlighttable {
+    /* Adds them margin-bottom to highlightable instead of <pre> */
+    margin-bottom: 11px;
 }
 
-.typygmentdown .c {
-    font-style: italic;
-}
-
-.typygmentdown .k, .typygmentdown .ow {
-    color: #404040;
-}
-
-.typygmentdown .c, .typygmentdown .sd {
-    color: #808080;
-}
-
-/* Comments */
-
-#comment-list {
-    margin: 0;
-    padding: 0;
-}
-
-#comment-list li {
-    padding-bottom: 1.25em;
-}
-
-#comment-list cite {
-    font-style: normal;
-}
-
-#comment-list cite + blockquote {
-    margin-top: 0;
-}
-
-#comment-list blockquote {
-    margin: 0;
-}
-
-#comment-list p {
-    margin-top: 1.25em;
-    text-indent: 0;
-}
-
-#comment-form th {
-    width: 25%;
-}
-
-#comment-form input, #comment-form select, #comment-form textarea {
+.highlighttable {
     width: 100%;
 }
 
-@media print {
-    #comment-list, #comment-form {
-        display: none;
+#categories ul, #tags ul {
+    list-style: none;
+    padding: 0;
+    margin-left: 0;
+}
+
+.docutils.footnote td.label {
+    display: table-cell;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    color: inherit;
+    text-align: inherit;
+    white-space: inherit;
+    border-radius: inherit;
+}
+
+.categories-timestamp {
+    color: #AAAAAA;
+    font-size: 0.9em;
+    margin-right: 10px;
+}
+
+.tagcloud li {
+    padding: 0px;
+}
+
+#banner {
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-attachment: scroll;
+    background-size: cover; 
+    background-color: #C4C4C4;
+    margin: 0 0 20px;
+    padding: 70px 0; /*controls padding around inner text*/
+    position: relative;
+}
+
+#banner .copy {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.7);
+    display: inline;
+    float: left;
+    max-width: 600px;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+#banner h1 {
+    color: #fff;
+    font-family: "HelveticaNeue-CondensedBold","Helvetica Neue CE 600 Condensed","Helvetica Neue LT Condensed","Helvetica Neue 600 Condensed","HelveticaNeue-BoldCondensed","Helvetica Neue BoldCondensed","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 60px;
+    font-stretch: condensed;
+    font-weight: 700;
+    line-height: 0.9;
+    margin: 0;
+    text-transform: uppercase;
+}
+#banner .intro {
+    color: #fff;
+    font-size: 21px;
+    line-height: 1.33;
+    opacity: 0.75;
+}
+#banner .btn, #banner .intro {
+    margin-left: 4px;
+}
+
+/* Solutions for mobile and small screens  */
+@media (max-width: 650px) {
+    #banner h1{
+       font-size: 30px; /* !important;*/
+    }
+    #banner .intro{
+        font-size: 16px;
     }
 }
-
-/* Friends */
-
-#friends li {
-    list-style: none;
-    margin-left: 0;
-    padding-left: 0;
-}
-
-#friends a[rel] {
-    margin-left: 20px;
-}
-
-#friends a[rel~="colleague"] {
-    background: url("/static/dj.png") left center no-repeat;
-    margin-left: 0;
-    padding-left: 20px;
-}
-
-/* Forms */
-
-form, form p {
-    text-indent: 0;
-    text-align: left;
-}
-
-from th, form td {
-    margin: 0;
-    padding: 0;
-}
-
-input, select, textarea {
-    background: white;
-    line-height: 1.5;
-}
-
-input[type="submit"], button {
-    border: 1px outset;
-    text-align: center;
-    background: #85ac40;
-    padding: .2em;
-}
-
-input[type="text"], textarea {
-    vertical-align: top;
-    border: 1px solid #e0e0e0;
-}
-
-input[type="text"], select {
-    width: 15em;
-}
-
-textarea {
-    width: 45em;
-    height: 7.5em;
-    overflow: auto;
-}
-
-#honeypot {
-    display: none;
-}
-
-/* Tables */
-
-table {
-    border-collapse: collapse;
-    border: none;
-    margin: 1.25em auto;
-}
-
-caption {
-    border-bottom: 1px solid #303030;
-}
-
-thead th {
-    border-bottom: 1px solid #303030;
-}
-
-tfoot th,
-tfoot td {
-    border-top: 1px solid #303030;
-}
-
-th[scope="row"],
-th[scope="col"] {
-    text-align: left;
-}
-
-tbody + tbody th, tbody + tbody td {
-    border-top: 1px solid #d0d0d0;
-}
-
-tbody + tbody tr + tr th,
-tbody + tbody tr + tr td,
-tfoot tr + tr th,
-tfoot tr + tr td {
-    border-top: none;
-}
-
-th, td {
-    padding: 0 0.5em;
-    font-weight: normal;
-    vertical-align: top;
-}
-
-table.numeric td, table.numeric th[scope="col"] {
-    text-align: right;
-}
-
