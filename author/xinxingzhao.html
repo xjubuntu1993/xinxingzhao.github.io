@@ -46,11 +46,17 @@
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
+                         <li><a href="/pages/about.html">
+                             关于我
+                          </a></li>
                         <li >
                             <a href="/category/blog.html">Blog</a>
                         </li>
                         <li >
                             <a href="/category/linux.html">Linux</a>
+                        </li>
+                        <li >
+                            <a href="/category/pelican.html">Pelican</a>
                         </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -67,38 +73,164 @@
         <div class="col-sm-9">
 
             <article>
-                <h2><a href="/category/2016/has-read-book-of-2016.html">2016年已完成的读书</a></h2>
+                <h2><a href="/blog/2016/03/31/pelican-setting.html">Pelican系列:个性化设置</a></h2>
+                <div class="summary"><p>通过下面的命令可以生成配置文件</p>
+<div class="highlight"><pre><span></span>pelican content -s path/to/your/pelicanconf.py
+</pre></div>
+
+
+<p>如果是使用<strong>pelican-quickstart</strong>创建博客骨架的话，配置文件会自动生成</p>
+<p>温馨提示：如果在实验不同的配置的时候，特别是元数据的配置，可能因为缓存
+的原因而没有发生变化，可以通过配置<strong>LOAD_CONTENT_CACHE = False</strong>或者
+在命令中添加参数<strong>--ignore-cache</strong>处理缓存的问题</p>
+<p>配置文件<strong>pelicanconf.py</strong>所有等号前面的必须是大写的，否则Pelican将
+无法解析配置文件，除了Number，boolean，dictionaries和tuples不需要引号
+因起来，其他类型必须用引号引起来。</p>
+<h3>基础配置</h3>
+                    <a class="btn btn-default btn-xs" href="/blog/2016/03/31/pelican-setting.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="/blog/2016/03/29/pelican-pulish-your-site.html">Pelican系列:生成博客，预览博客，将博客发布到GitHub，绑定域名</a></h2>
+                <div class="summary"><h3>网站生成</h3>
+<p>文章写好了，接下来当然是要将写好的文章转化为HTML文件了，Pelican提供了一些命令来帮助我们
+生成HTML文件</p>
+<div class="highlight"><pre><span></span>pelican /path/to/your/content/ [-s path/to/your/settings.py]
+</pre></div>
+
+
+<p>执行上面这条命令之后，生成的HTML代码会被输出到<strong>output/</strong>下面，这个目录也可以在配置文件
+里面进行修改，如果没有配置主题的话，会使用默认的主题。</p>
+<p>如果希望Pelican监听文章的变化，即每次保存文章内容就自动生成了HTML文件，可以在命令里面添
+加参数<strong>-r</strong>或者<strong>--autoreload</strong></p>
+<p>关于其他Pelican详细的命令说明可以查看Pelican的帮助</p>
+<div class="highlight"><pre><span></span>pelican --help
+</pre></div>
+
+
+<h3>预览博客</h3>
+<p>第一种方式就是直接用双击index.html文件，用浏览器打开，还有一种方法当然就是起一个小小服
+务器。</p>
+<p>如果是Python 2</p>
+<div class="highlight"><pre><span></span>cd output
+python -m SimpleHTTPServer
+</pre></div>
+
+
+<p>如果是Python 3</p>
+<div class="highlight"><pre><span></span>cd ...</pre></div>
+                    <a class="btn btn-default btn-xs" href="/blog/2016/03/29/pelican-pulish-your-site.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="/blog/2016/03/25/pelican-installing.html">Pelican系列:安装和升级Pelican</a></h2>
+                <div class="summary"><h3>安装</h3>
+<p>Pelican 目前支持最好的Python版本是2.7.x，早期的版本已经不在支持。3.3+版本暂时是支持的，
+最简单的安装方法是用pip安装。</p>
+<div class="highlight"><pre><span></span>pip install pelican
+</pre></div>
+
+
+<p>在Linux下面如果提示权限问题，就在命令前面添加<strong>sudo</strong>。</p>
+<p>还有一种安装方法就是为Pelican创建一个虚拟的Python环境，安装Pelican之前需要先安装
+<a href="https://virtualenv.pypa.io/en/latest/installation.html">virtualenv</a>，</p>
+<div class="highlight"><pre><span></span>pip install virtualenv
+virtualenv ~/virtualenvs/pelican
+cd ~/virtualenvs/pelican
+source bin/activate
+</pre></div>
+
+
+<p>安装好Python的虚拟环境之后就可以直接用<strong>pip install pelican</strong>安装了，不需要加<strong>sudo</strong>
+权限，如果系统安装git，还可以用源码安装。用源码安装可以安装到最新的版本。</p>
+<div class="highlight"><pre><span></span>git clone git@github.com:getpelican/pelican.git ...</pre></div>
+                    <a class="btn btn-default btn-xs" href="/blog/2016/03/25/pelican-installing.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="/blog/2016/03/25/pelican-writing-content.html">Pelican系列:开启写作人生</a></h2>
+                <div class="summary"><h3>博文和页面的区别</h3>
+<p>Articles: 博文，是指具体写的文章。</p>
+<p>Pages: 页面，一般指一些固定不变的页面，比如关于等</p>
+<h3>元数据</h3>
+<p>元数据可以进行一些搜索引擎的优化，包含博文的一些基础信息。</p>
+<p>如果用reStructuredText来编写内容的话，可以像下面这样写元数据头</p>
+<div class="highlight"><pre><span></span>My super title
+##############
+
+:date: 2010-10-03 10:20
+:modified: 2010-10-04 18:40
+:tags: thats, awesome
+:category: yeah
+:slug: my-super-post
+:authors: Alexis Metaireau, Conan Doyle
+:summary: Short version for index and feeds
+</pre></div>
+
+
+<p>多个标签(tags)和多个作者(authors)可以用逗号分割。</p>
+<div class="highlight"><pre><span></span><span class="nd">:tags</span><span class="o">:</span> <span class="nt">pelican ...</span></pre></div>
+                    <a class="btn btn-default btn-xs" href="/blog/2016/03/25/pelican-writing-content.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="/blog/2016/03/24/pelican-quickstart.html">Pelican系列:快速开始搭建自己的静态博客</a></h2>
+                <div class="summary"><h3>前言</h3>
+<p>一直想搞一个自己的博客，也想耍耍酷，不管访问量怎么样，总感觉自己很了不起。当然写博客是一件很苦的
+事情，能坚持下来也是很苦的事情的。自己肚子里没什么货，写出来的东西也没啥深度，所以要经营好一个博
+客是需要相当大的毅力，特别佩服那些能把自己的博客捯饬得那么好的博主。</p>
+<p>所以从今天开始我也要好好的收拾自己的博客，域名也买了有一段时间了。最开始的时候我用的是Octopress，
+是用Ruby写的，写了两篇文章便没有再坚持。最近有重新找了Pelican，用Python写的，搞Python开发还是用
+自己熟悉的语言比较好吧。</p>
+<p>现在问题来了，打算好好的写博客，但是不知道写啥，仔细读了Pelican的文档，决定根据Pelican的文档写一
+个完整的Pelican博客搭建教程。当然了，我们在搭建博客之前要先来说说写博客的好处：</p>
+<ul>
+<li>我本身是做开发的，写博客对技术水平有很大的提高。</li>
+<li>最近买了kindle，就是为了好好读书，可是不能光读书啊，有什么想法还是要记录下来的。</li>
+<li>我的文采呢一直都很差，写写博客可以提高自己的文采，也能锻炼自己的语言组织能力。</li>
+</ul>
+<p>说了那么多，下面我们就要开始搭建自己的博客了。内容我都是参考Pelican的文档写的，我英语比较差，就
+勉勉强强的根据文档的翻译一下了。</p>
+<h3>Pelican 安装</h3>
+<p>安装Pelican需要本机安装Python 2.7 ...</p>
+                    <a class="btn btn-default btn-xs" href="/blog/2016/03/24/pelican-quickstart.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="/blog/2016/03/23/ubuntu-cansel-alt.html">Ubuntu 取消Alt键调出搜索框</a></h2>
+                <div class="summary"><p>Ubuntu Alt键默认绑定了一个搜索功能，这个很烦人了，取消它。</p>
+<p>Systems Settings &gt; Keyboard &gt; Shortcuts</p>
+                    <a class="btn btn-default btn-xs" href="/blog/2016/03/23/ubuntu-cansel-alt.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="/blog/2016/03/22/has-read-book-of-2016.html">2016年已完成的读书</a></h2>
                 <div class="summary"><p>为了读书入手一台kindle，希望自己能专注于阅读，把碎片化的时间利用起来。</p>
 <p>图书完成列表如下</p>
 <iframe src="http://rcm-cn.amazon-adsystem.com/e/cm?t=xinxingzhao-23&o=28&p=8&l=as1&asins=B00C4PGGUW&ref=tf_til&fc1=000000&IS2=1&lt1=_blank&m=amazon&lc1=0000FF&bc1=000000&bg1=FFFFFF&f=ifr" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
-                    <a class="btn btn-default btn-xs" href="/category/2016/has-read-book-of-2016.html">more ...</a>
+                    <a class="btn btn-default btn-xs" href="/blog/2016/03/22/has-read-book-of-2016.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a href="/category/2016/linux-alias.html">linux添加命令别名</a></h2>
-                <div class="summary"><h3>添加命令别名是一件很爽的事情</h3>
-<p>对于一些每天都要输入很多便的命令，给建个别名肯定是再好不过了</p>
-<div class="highlight"><pre><span></span>alias ..=&quot;cd ..&quot;
-alias ..2=&quot;cd ../..&quot;
-alias ..3=&quot;cd ../../..&quot;
-alias ..4=&quot;cd ../../../..&quot;
-alias ..5=&quot;cd ../../../../..&quot;
-
-alias gadd=&quot;git add .&quot;
-alias gcommit=&quot;git commit -am &quot;
-alias gpush=&quot;git push origin master&quot;
-alias gpull=&quot;git pull origin master&quot;
-</pre></div>
-                    <a class="btn btn-default btn-xs" href="/category/2016/linux-alias.html">more ...</a>
+                <h2><a href="/blog/2016/03/17/linux-alias.html">linux添加命令别名</a></h2>
+                <div class="summary"><p>设置Linux命令别名</p>
+                    <a class="btn btn-default btn-xs" href="/blog/2016/03/17/linux-alias.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a href="/category/2016/create-my-blog.html">用Pelican和Github Pages搭建自己的博客</a></h2>
+                <h2><a href="/blog/2016/03/16/create-my-blog.html">用Pelican和Github Pages搭建自己的博客</a></h2>
                 <div class="summary"><p>本人比较懒，看下面的链接吧</p>
 <p><a href="http://www.dongxf.com/3_Build_Personal_Blog_With_Pelican_And_GitHub_Pages.html">用 Pelican 和 GitHub Pages 搭建免费的个人博客</a></p>
-                    <a class="btn btn-default btn-xs" href="/category/2016/create-my-blog.html">more ...</a>
+<p>!!!!!</p>
+                    <a class="btn btn-default btn-xs" href="/blog/2016/03/16/create-my-blog.html">more ...</a>
                 </div>
             </article>
             <hr/>

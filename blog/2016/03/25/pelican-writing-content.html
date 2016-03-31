@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en"
+>
+<head>
+    <title>Pelican系列:开启写作人生 - 好吧，我现在胡说了</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="/blog/2016/03/25/pelican-writing-content.html">
+
+        <meta name="author" content="xinxingzhao" />
+        <meta name="keywords" content="Pelican" />
+        <meta name="description" content="博文和页面的区别 Articles: 博文，是指具体写的文章。 Pages: 页面，一般指一些固定不变的页面，比如关于等 元数据 元数据可以进行一些搜索引擎的优化，包含博文的一些基础信息。 如果用reStructuredText来编写内容的话，可以像下面这样写元数据头 My super title ############## :date: 2010-10-03 10:20 :modified: 2010-10-04 18:40 :tags: thats, awesome :category: yeah :slug: my-super-post :authors: Alexis Metaireau, Conan Doyle :summary: Short version for index and feeds 多个标签(tags)和多个作者(authors)可以用逗号分割。 :tags: pelican ..." />
+
+        <meta property="og:site_name" content="好吧，我现在胡说了" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Pelican系列:开启写作人生"/>
+        <meta property="og:url" content="/blog/2016/03/25/pelican-writing-content.html"/>
+        <meta property="og:description" content="博文和页面的区别 Articles: 博文，是指具体写的文章。 Pages: 页面，一般指一些固定不变的页面，比如关于等 元数据 元数据可以进行一些搜索引擎的优化，包含博文的一些基础信息。 如果用reStructuredText来编写内容的话，可以像下面这样写元数据头 My super title ############## :date: 2010-10-03 10:20 :modified: 2010-10-04 18:40 :tags: thats, awesome :category: yeah :slug: my-super-post :authors: Alexis Metaireau, Conan Doyle :summary: Short version for index and feeds 多个标签(tags)和多个作者(authors)可以用逗号分割。 :tags: pelican ..."/>
+        <meta property="article:published_time" content="2016-03-25" />
+            <meta property="article:section" content="Pelican" />
+            <meta property="article:tag" content="Pelican" />
+            <meta property="article:author" content="xinxingzhao" />
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="/theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="/theme/css/pygments/native.css" rel="stylesheet">
+    <link rel="stylesheet" href="/theme/css/style.css" type="text/css"/>
+
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="/" class="navbar-brand">
+好吧，我现在胡说了            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                         <li><a href="/pages/about.html">
+                             关于我
+                          </a></li>
+                        <li >
+                            <a href="/category/blog.html">Blog</a>
+                        </li>
+                        <li >
+                            <a href="/category/linux.html">Linux</a>
+                        </li>
+                        <li class="active">
+                            <a href="/category/pelican.html">Pelican</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="/blog/2016/03/25/pelican-writing-content.html"
+                       rel="bookmark"
+                       title="Permalink to Pelican系列:开启写作人生">
+                        Pelican系列:开启写作人生
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2016-03-25T00:00:00+08:00"> 2016-03-25</time>
+    </span>
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="/tag/pelican.html">Pelican</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <h3>博文和页面的区别</h3>
+<p>Articles: 博文，是指具体写的文章。</p>
+<p>Pages: 页面，一般指一些固定不变的页面，比如关于等</p>
+<h3>元数据</h3>
+<p>元数据可以进行一些搜索引擎的优化，包含博文的一些基础信息。</p>
+<p>如果用reStructuredText来编写内容的话，可以像下面这样写元数据头</p>
+<div class="highlight"><pre><span></span>My super title
+##############
+
+:date: 2010-10-03 10:20
+:modified: 2010-10-04 18:40
+:tags: thats, awesome
+:category: yeah
+:slug: my-super-post
+:authors: Alexis Metaireau, Conan Doyle
+:summary: Short version for index and feeds
+</pre></div>
+
+
+<p>多个标签(tags)和多个作者(authors)可以用逗号分割。</p>
+<div class="highlight"><pre><span></span><span class="nd">:tags</span><span class="o">:</span> <span class="nt">pelican</span><span class="o">,</span> <span class="nt">publishing</span> <span class="nt">tool</span><span class="o">;</span> <span class="nt">pelican</span><span class="o">,</span> <span class="nt">bird</span>
+<span class="nd">:authors</span><span class="o">:</span> <span class="nt">Metaireau</span><span class="o">,</span> <span class="nt">Alexis</span><span class="o">;</span> <span class="nt">Doyle</span><span class="o">,</span> <span class="nt">Conan</span>
+</pre></div>
+
+
+<p>Pelican 还支持在reStructuredText中写abbr标签，使用方法如下</p>
+<div class="highlight"><pre><span></span>This will be turned into :abbr:`HTML (HyperText Markup Language)`.
+</pre></div>
+
+
+<p>同样可以使用Markdown语法(以<strong>.md</strong>,<strong>.markdown</strong>,<strong>.mkd</strong>,<strong>.mdown</strong>结尾的文件)，
+Markdown生成html文件需要Markdown的模块支持，通过命令<strong>pip install markdown</strong>安装。</p>
+<p>Pelican 还支持<a href="http://pythonhosted.org/Markdown/extensions/">Markdown</a>的扩展语法，
+Markdown的扩展没有包含在Markdown的模块下面，需要通过<strong>MD_EXTENSIONS</strong>进行配置。</p>
+<p>用Markdown写文章的基本格式如下</p>
+<div class="highlight"><pre><span></span><span class="n">Title</span><span class="o">:</span> <span class="n">My</span> <span class="kd">super</span> <span class="n">title</span>
+<span class="n">Date</span><span class="o">:</span> <span class="mi">2010</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">03</span> <span class="mi">10</span><span class="o">:</span><span class="mi">20</span>
+<span class="n">Modified</span><span class="o">:</span> <span class="mi">2010</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">05</span> <span class="mi">19</span><span class="o">:</span><span class="mi">30</span>
+<span class="n">Category</span><span class="o">:</span> <span class="n">Python</span>
+<span class="n">Tags</span><span class="o">:</span> <span class="n">pelican</span><span class="o">,</span> <span class="n">publishing</span>
+<span class="n">Slug</span><span class="o">:</span> <span class="n">my</span><span class="o">-</span><span class="kd">super</span><span class="o">-</span><span class="n">post</span>
+<span class="n">Authors</span><span class="o">:</span> <span class="n">Alexis</span> <span class="n">Metaireau</span><span class="o">,</span> <span class="n">Conan</span> <span class="n">Doyle</span>
+<span class="n">Summary</span><span class="o">:</span> <span class="n">Short</span> <span class="n">version</span> <span class="k">for</span> <span class="n">index</span> <span class="n">and</span> <span class="n">feeds</span>
+
+<span class="n">This</span> <span class="k">is</span> <span class="n">the</span> <span class="n">content</span> <span class="n">of</span> <span class="n">my</span> <span class="kd">super</span> <span class="n">blog</span> <span class="n">post</span><span class="o">.</span>
+</pre></div>
+
+
+<p>还可以用插件支持更多的格式，这个以后研究了。</p>
+<p>Pelican也能直接解析html和htm文件，解析html文件就比较直接了，跟复制没啥区别。</p>
+<div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>My super title<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;tags&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;thats, awesome&quot;</span> <span class="p">/&gt;</span>
+        <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;date&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;2012-07-09 22:28&quot;</span> <span class="p">/&gt;</span>
+        <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;modified&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;2012-07-10 20:14&quot;</span> <span class="p">/&gt;</span>
+        <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;category&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;yeah&quot;</span> <span class="p">/&gt;</span>
+        <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;authors&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;Alexis Métaireau, Conan Doyle&quot;</span> <span class="p">/&gt;</span>
+        <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;summary&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;Short version for index and feeds&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+        This is the content of my super blog post.
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+
+
+<p>温馨提示：除了标题之外，其他元数据不是必填项，如果没有指定时间且<strong>DEFAULT_DATE</strong>
+设置为<strong>'fs'</strong>，Pelican就会根据文件的时间戳来确定时间，文章的分类可以根据子目录
+的名称来确定，例如：python/foobar/myfoobar.rst的分类就行foobar，如果不希望子目录
+的名称不作为分类名称，可以通过设置<strong>USE_FOLDER_AS_CATEGORY</strong>为<strong>False</strong>。</p>
+<p><strong>modified</strong>是值最后编辑文章的时间，默认和<strong>date</strong>相同。另外，可以通过<strong>modified</strong>
+进行RSS推送，可能在刚写文章的时候RSS已经推送了一遍，后来进行了修改，就可以通过
+<strong>modified</strong>进行再次推送。</p>
+<p><strong>authors</strong>用来表示多个作者，如果只有一个作者，可以使用<strong>author</strong>。</p>
+<p>如果希望文章的摘要有一个确定的长度，可以通过设置<strong>SUMMARY_MAX_LENGTH</strong>，Pelican
+会从文章的开头进行截取制定的长度作为摘要。</p>
+<p>也可以通过设置<strong>FILENAME_METADATA</strong>文件名称来提取元数据，默认情况下，
+<strong>FILENAME_METADATA</strong>只是提出文件名上面的的日期信息，如果希望提出文件名中的除日期信息之外
+的内容为<strong>slug</strong>，可以将<strong>FILENAME_METADATA</strong>设置为：<strong>'(?P<date>\d{4}-\d{2}-\d{2})_(?P<slug>.*)'</strong></p>
+<p>需要注意的是，在文件头编写的元数据信息会覆盖通过文件名提取出来的信息。</p>
+<h3>页面</h3>
+<p>如果在content下面创建了目录pages，这个目录下所有的文件都将被生成静态页面，比如About和Contact
+页面。</p>
+<p>可以通过设置<strong>DISPLAY_PAGES_ON_MENU</strong>来控制页面是否在导航栏显示，默认情况是<strong>True</strong></p>
+<p>如果希望页面不在导航条上显示，可以在页面的元数据里面添加：<strong>status: hidden</strong>属性，对于
+404页面很有效果，因为404静态页面我们是不希望在导航条上面显示的。</p>
+<h3>引用内部的链接</h3>
+<p>从Pelican3.1开始，可以通过content的目录结构在不同的文章之间进行链接，这样可以很方便
+引用操作了。</p>
+<p>引用content里面的的内容的语法是：<strong>{filename}path/to/file</strong>，<strong>{fielname}</strong>是必填内容，
+可以同时支持Linux和windows</p>
+<p>假设content的目录结构是这样的</p>
+<div class="highlight"><pre><span></span>website/
+├── content
+│   ├── category/
+│   │   └── article1.rst
+│   ├── article2.md
+│   └── pages
+│       └── about.md
+└── pelican.conf.py
+</pre></div>
+
+
+<p>在<strong>article1.rst</strong>中链接代码</p>
+<div class="highlight"><pre><span></span>The first article
+#################
+
+:date: 2012-12-01 10:02
+
+See below intra-site link examples in reStructuredText format.
+
+`a link relative to the current file &lt;{filename}../article2.md&gt;`_
+`a link relative to the content root &lt;{filename}/article2.md&gt;`_
+</pre></div>
+
+
+<p>在<strong>article2.md</strong></p>
+<div class="highlight"><pre><span></span><span class="n">Title</span><span class="o">:</span> <span class="n">The</span> <span class="n">second</span> <span class="n">article</span>
+<span class="n">Date</span><span class="o">:</span> <span class="mi">2012</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">01</span> <span class="mi">10</span><span class="o">:</span><span class="mi">02</span>
+
+<span class="n">See</span> <span class="n">below</span> <span class="n">intra</span><span class="o">-</span><span class="n">site</span> <span class="n">link</span> <span class="n">examples</span> <span class="k">in</span> <span class="n">Markdown</span> <span class="n">format</span><span class="o">.</span>
+
+<span class="o">[</span><span class="n">a</span> <span class="n">link</span> <span class="n">relative</span> <span class="n">to</span> <span class="n">the</span> <span class="n">current</span> <span class="n">file</span><span class="o">]({</span><span class="n">filename</span><span class="o">}</span><span class="n">category</span><span class="o">/</span><span class="n">article1</span><span class="o">.</span><span class="na">rst</span><span class="o">)</span>
+<span class="o">[</span><span class="n">a</span> <span class="n">link</span> <span class="n">relative</span> <span class="n">to</span> <span class="n">the</span> <span class="n">content</span> <span class="n">root</span><span class="o">]({</span><span class="n">filename</span><span class="o">}/</span><span class="n">category</span><span class="o">/</span><span class="n">article1</span><span class="o">.</span><span class="na">rst</span><span class="o">)</span>
+</pre></div>
+
+
+<h3>链接静态文件</h3>
+<p>有时候我们需要引用一些除了博客和页面以为的资源，比如图片，PDF文件等，这就需要在
+<strong>pelicanconf.py</strong>中配置<strong>STATIC_PATHS</strong>属性，Pelican默认设置content下的images
+为图片资源，其他的资源需要进行配置。</p>
+<p>假设content的目录结构如下</p>
+<div class="highlight"><pre><span></span>content
+├── images
+│   └── han.jpg
+├── pdfs
+│   └── menu.pdf
+└── pages
+    └── test.md
+</pre></div>
+
+
+<p>在<strong>test.md</strong>中引用</p>
+<div class="highlight"><pre><span></span><span class="o">!</span><span class="p">[</span><span class="n">Alt</span> <span class="n">Text</span><span class="p">]({</span><span class="n">filename</span><span class="p">}</span><span class="o">/</span><span class="n">images</span><span class="o">/</span><span class="n">han</span><span class="p">.</span><span class="n">jpg</span><span class="p">)</span>
+<span class="p">[</span><span class="n">Our</span> <span class="n">Menu</span><span class="p">]({</span><span class="n">filename</span><span class="p">}</span><span class="o">/</span><span class="n">pdfs</span><span class="o">/</span><span class="n">menu</span><span class="p">.</span><span class="n">pdf</span><span class="p">)</span>
+</pre></div>
+
+
+<p><strong>pelicanconf.py</strong>新增配置</p>
+<div class="highlight"><pre><span></span>STATIC_PATHS = [&#39;images&#39;, &#39;pdfs&#39;]
+</pre></div>
+
+
+<p>生产页面时，Pelican会将<strong>han.jpg</strong>复制到<strong>output/images/han.jpg</strong>，
+<strong>menu.pdf</strong>复制到<strong>output/pdfs/menu.pdf</strong>，同时将链接适配到<strong>test.md</strong></p>
+<h3>附件</h3>
+<p>从Pelican 3.5开始，通过<strong>{attach}path/to/file</strong>可以给文章或者页面添加附件，
+语法和<strong>{filename}</strong>类似，但是附件会被复制到文章或者页面的同一个目录下面。
+这种方式只有在<strong>STATIC_PATHS</strong>设置了该目录才能使用这个标签。</p>
+<p>假设content的目录结构如下</p>
+<div class="highlight"><pre><span></span>content
+├── blog
+│   ├── icons
+│   │   └── icon.png
+│   ├── photo.jpg
+│   └── testpost.md
+└── downloads
+    └── archive.zip
+</pre></div>
+
+
+<p><strong>pelicanconf.py</strong>的配置如下</p>
+<div class="highlight"><pre><span></span>PATH = &#39;content&#39;
+STATIC_PATHS = [&#39;blog&#39;, &#39;downloads&#39;]
+ARTICLE_PATHS = [&#39;blog&#39;]
+ARTICLE_SAVE_AS = &#39;{date:%Y}/{slug}.html&#39;
+ARTICLE_URL = &#39;{date:%Y}/{slug}.html&#39;
+</pre></div>
+
+
+<p><strong>testpost.md</strong>的内容如下</p>
+<div class="highlight"><pre><span></span><span class="nl">Title</span><span class="p">:</span> <span class="n">Test</span> <span class="n">Post</span>
+<span class="nl">Category</span><span class="p">:</span> <span class="n">test</span>
+<span class="nl">Date</span><span class="p">:</span> <span class="mi">2014</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">31</span>
+
+<span class="o">!</span><span class="p">[</span><span class="n">Icon</span><span class="p">]({</span><span class="n">attach</span><span class="p">}</span><span class="n">icons</span><span class="o">/</span><span class="n">icon</span><span class="p">.</span><span class="n">png</span><span class="p">)</span>
+<span class="o">!</span><span class="p">[</span><span class="n">Photo</span><span class="p">]({</span><span class="n">attach</span><span class="p">}</span><span class="n">photo</span><span class="p">.</span><span class="n">jpg</span><span class="p">)</span>
+<span class="p">[</span><span class="n">Downloadable</span> <span class="n">File</span><span class="p">]({</span><span class="n">attach</span><span class="p">}</span><span class="o">/</span><span class="n">downloads</span><span class="o">/</span><span class="n">archive</span><span class="p">.</span><span class="n">zip</span><span class="p">)</span>
+</pre></div>
+
+
+<p>生成之后的output的目录结构如下</p>
+<div class="highlight"><pre><span></span>output
+└── 2014
+    ├── archive.zip
+    ├── icons
+    │   └── icon.png
+    ├── photo.jpg
+    └── test-post.html
+</pre></div>
+
+
+<p>如果使用<strong>{attach}</strong>引用文章所在目录之外的资源，在生成文件的时候会将这个
+资源复制到文章所在的目录下。</p>
+<p>如果资源被多篇文章通过<strong>{attach}</strong>引用，在第一个被引用的地方Pelican会
+以attach的方式来处理这个资源，在之后的引用的地方会按照<strong>{filename}</strong>
+的方式来链接这个资源，也就是说，在同一个目录下同一个资源被多次引用，Pelican
+只复制一次这个资源到该目录下面。</p>
+<p>请谨慎使用多篇文章引用同一个资源，因为Pelican对<strong>{attach}</strong>资源处理的顺序是
+不确定的，就可能导致资源复制到不确定的目录下面，只有当所有的引用同一个资源的
+文章在同一个目录下面的时候才是安全的。</p>
+<h3>链接标签和分类</h3>
+<p>链接标签和分类的语法为<strong>{tag}tagname</strong>和<strong>{category}foobar</strong></p>
+<h3>语法高亮</h3>
+<p>Pelican为代码块提供了语法高亮功能，对于reStructuredText用户，可以使用<strong>code-block</strong>
+标记，假设我们要高亮<strong>Python</strong>的代码。</p>
+<div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">code-block</span><span class="p">::</span> python
+
+   print(&quot;Pelican is a static site generator.&quot;)
+</pre></div>
+
+
+<p>对于Markdown用户，按照一下语法</p>
+<div class="highlight"><pre><span></span>There are two ways to specify the identifier:
+
+    :::python
+    print(&quot;The triple-colon syntax will *not* show line numbers.&quot;)
+
+To display line numbers, use a path-less shebang instead of colons:
+
+    #!python
+    print(&quot;The path-less shebang syntax *will* show line numbers.&quot;)
+</pre></div>
+
+
+<h3>发布草稿</h3>
+<p>有时候我们希望把我们的草稿先发布出来给部分朋友看看，不让文章在首页和分类列表里面显示
+出来，我们可以在文章中添加<strong>Status: draft</strong>属性。</p>
+<p>如果将所有刚写好的文章都作为草搞件发布的话，可以在配置文件中配置<strong>DEFAULT_METADATA</strong>
+属性</p>
+<div class="highlight"><pre><span></span>DEFAULT_METADATA = {
+        &#39;status&#39;: &#39;draft&#39;,
+}
+</pre></div>
+
+
+<p>这样文章在发布的时候默认就是草稿，通过修改文章的配置为<strong>Status: published</strong>将文章正式
+发布出来。</p>
+            </div>
+            <!-- /.entry-content -->
+    <hr/>
+    <section class="comments" id="comments">
+        <h2>Comments</h2>
+
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'xinxingzhao'; // required: replace example with your forum shortname
+
+                    var disqus_identifier = 'pelican-writing-content';
+                var disqus_url = '/blog/2016/03/25/pelican-writing-content.html';
+
+            var disqus_config = function () {
+                this.language = "en";
+            };
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </section>
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+
+<section class="well well-sm">
+    <ul class="list-group list-group-flush">
+
+
+
+            <li class="list-group-item"><a href="/"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
+                <ul class="list-group " id="tags">
+                </ul>
+            </li>
+    <li class="list-group-item"><h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
+      <ul class="list-group" id="links">
+        <li class="list-group-item">
+            <a href="http://getpelican.com/" target="_blank">
+                Pelican
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="http://python.org/" target="_blank">
+                Python
+            </a>
+        </li>
+      </ul>
+    </li>
+    </ul>
+</section>
+            </aside>
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2016 xinxingzhao
+            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="/theme/js/respond.min.js"></script>
+
+    <!-- Disqus -->
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'xinxingzhao'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+    <!-- End Disqus Code -->
+
+</body>
+</html>
