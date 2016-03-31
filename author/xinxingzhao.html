@@ -47,7 +47,7 @@
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
                          <li><a href="/pages/about.html">
-                             关于我
+                             About
                           </a></li>
                         <li >
                             <a href="/category/blog.html">Blog</a>
@@ -87,6 +87,15 @@
 无法解析配置文件，除了Number，boolean，dictionaries和tuples不需要引号
 因起来，其他类型必须用引号引起来。</p>
 <h3>基础配置</h3>
+<ul>
+<li>
+<p><strong>AUTHOR</strong> : 默认文章作者，可以给自己起个笔名什么的</p>
+</li>
+<li>
+<p><strong>DATE_FORMATS = {}</strong> : 如果博客是多种语言的，可以为每种语言设置一种日期格式</p>
+</li>
+<li>
+<p><strong>USE_FOLDER_AS_CATEGORY = True</strong> : 如果在文章里面没有设置<strong>Category</strong>属性，那么将取文章所在的子目录作为分类，如果USE_FOLDER_AS_CATEGORY设置为False ...</p></li></ul>
                     <a class="btn btn-default btn-xs" href="/blog/2016/03/31/pelican-setting.html">more ...</a>
                 </div>
             </article>
@@ -301,21 +310,6 @@ alias gpull=&quot;git pull origin master&quot;
 <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
 <script src="/theme/js/respond.min.js"></script>
 
-    <!-- Disqus -->
-    <script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'xinxingzhao'; // required: replace example with your forum shortname
-
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function () {
-            var s = document.createElement('script');
-            s.async = true;
-            s.type = 'text/javascript';
-            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-        }());
-    </script>
-    <!-- End Disqus Code -->
     <!-- Google Analytics -->
     <script type="text/javascript">
 
