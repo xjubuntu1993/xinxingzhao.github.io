@@ -14,13 +14,13 @@
 
         <meta name="author" content="xinxingzhao" />
         <meta name="keywords" content="Pelican" />
-        <meta name="description" content="通过下面的命令可以生成配置文件 pelican content -s path/to/your/pelicanconf.py 如果是使用pelican-quickstart创建博客骨架的话，配置文件会自动生成 温馨提示：如果在实验不同的配置的时候，特别是元数据的配置，可能因为缓存 的原因而没有发生变化，可以通过配置LOAD_CONTENT_CACHE = False或者 在命令中添加参数--ignore-cache处理缓存的问题 配置文件pelicanconf.py所有等号前面的必须是大写的，否则Pelican将 无法解析配置文件，除了Number，boolean，dictionaries和tuples不需要引号 因起来，其他类型必须用引号引起来。 基础配置 AUTHOR : 默认文章作者，可以给自己起个笔名什么的 DATE_FORMATS = {} : 如果博客是多种语言的，可以为每种语言设置一种日期格式 USE_FOLDER_AS_CATEGORY = True : 如果在文章里面没有设置Category属性，那么将取文章所在的子目录作为分类，如果USE_FOLDER_AS_CATEGORY设置为False ..." />
+        <meta name="description" content="通过下面的命令可以生成配置文件 pelican content -s path/to/your/pelicanconf.py 如果是使用pelican-quickstart创建博客骨架的话，配置文件会自动生成 温馨提示：如果在实验不同的配置的时候，特别是元数据的配置，可能因为缓存 的原因而没有发生变化，可以通过配置LOAD_CONTENT_CACHE = False或者 在命令中添加参数--ignore-cache处理缓存的问题 配置文件pelicanconf.py所有等号前面的必须是大写的，否则Pelican将 无法解析配置文件，除了Number，boolean，dictionaries和tuples不需要引号 因起来，其他类型必须用引号引起来。 基础配置 AUTHOR : 默认文章作者，可以给自己起个笔名什么的； DATE_FORMATS = {} : 如果博客是多种语言的，可以为每种语言设置一种日期格式； USE_FOLDER_AS_CATEGORY = True : 如果在文章里面没有设置Category属性，那么将取文章所在的子目录作为分类，如果USE_FOLDER_AS_CATEGORY设置为False ..." />
 
         <meta property="og:site_name" content="好吧，我现在胡说了" />
         <meta property="og:type" content="article"/>
         <meta property="og:title" content="Pelican系列:个性化设置"/>
         <meta property="og:url" content="/blog/2016/03/31/pelican-setting.html"/>
-        <meta property="og:description" content="通过下面的命令可以生成配置文件 pelican content -s path/to/your/pelicanconf.py 如果是使用pelican-quickstart创建博客骨架的话，配置文件会自动生成 温馨提示：如果在实验不同的配置的时候，特别是元数据的配置，可能因为缓存 的原因而没有发生变化，可以通过配置LOAD_CONTENT_CACHE = False或者 在命令中添加参数--ignore-cache处理缓存的问题 配置文件pelicanconf.py所有等号前面的必须是大写的，否则Pelican将 无法解析配置文件，除了Number，boolean，dictionaries和tuples不需要引号 因起来，其他类型必须用引号引起来。 基础配置 AUTHOR : 默认文章作者，可以给自己起个笔名什么的 DATE_FORMATS = {} : 如果博客是多种语言的，可以为每种语言设置一种日期格式 USE_FOLDER_AS_CATEGORY = True : 如果在文章里面没有设置Category属性，那么将取文章所在的子目录作为分类，如果USE_FOLDER_AS_CATEGORY设置为False ..."/>
+        <meta property="og:description" content="通过下面的命令可以生成配置文件 pelican content -s path/to/your/pelicanconf.py 如果是使用pelican-quickstart创建博客骨架的话，配置文件会自动生成 温馨提示：如果在实验不同的配置的时候，特别是元数据的配置，可能因为缓存 的原因而没有发生变化，可以通过配置LOAD_CONTENT_CACHE = False或者 在命令中添加参数--ignore-cache处理缓存的问题 配置文件pelicanconf.py所有等号前面的必须是大写的，否则Pelican将 无法解析配置文件，除了Number，boolean，dictionaries和tuples不需要引号 因起来，其他类型必须用引号引起来。 基础配置 AUTHOR : 默认文章作者，可以给自己起个笔名什么的； DATE_FORMATS = {} : 如果博客是多种语言的，可以为每种语言设置一种日期格式； USE_FOLDER_AS_CATEGORY = True : 如果在文章里面没有设置Category属性，那么将取文章所在的子目录作为分类，如果USE_FOLDER_AS_CATEGORY设置为False ..."/>
         <meta property="article:published_time" content="2016-03-31" />
             <meta property="article:section" content="Pelican" />
             <meta property="article:tag" content="Pelican" />
@@ -120,45 +120,183 @@
 <h3>基础配置</h3>
 <ul>
 <li>
-<p><strong>AUTHOR</strong> : 默认文章作者，可以给自己起个笔名什么的</p>
+<p><strong>AUTHOR</strong> : 默认文章作者，可以给自己起个笔名什么的；</p>
 </li>
 <li>
-<p><strong>DATE_FORMATS = {}</strong> : 如果博客是多种语言的，可以为每种语言设置一种日期格式</p>
+<p><strong>DATE_FORMATS = {}</strong> : 如果博客是多种语言的，可以为每种语言设置一种日期格式；</p>
 </li>
 <li>
-<p><strong>USE_FOLDER_AS_CATEGORY = True</strong> : 如果在文章里面没有设置<strong>Category</strong>属性，那么将取文章所在的子目录作为分类，如果USE_FOLDER_AS_CATEGORY设置为False，<strong>DEFAULT_CATEGORY</strong>将作为默认分类</p>
+<p><strong>USE_FOLDER_AS_CATEGORY = True</strong> : 如果在文章里面没有设置<strong>Category</strong>属性，那么将取文章所在的子目录作为分类，如果USE_FOLDER_AS_CATEGORY设置为False，<strong>DEFAULT_CATEGORY</strong>将作为默认分类；</p>
 </li>
 <li>
-<p><strong>DEFAULT_CATEGORY = 'misc'</strong> : 默认分类</p>
+<p><strong>DEFAULT_CATEGORY = 'misc'</strong> : 默认分类；</p>
 </li>
 <li>
-<p><strong>DEFAULT_DATE_FORMAT = '%a %d %B %Y'</strong> : 默认的日期格式</p>
+<p><strong>DEFAULT_DATE_FORMAT = '%a %d %B %Y'</strong> : 默认的日期格式；</p>
 </li>
 <li>
-<p><strong>DISPLAY_PAGES_ON_MENU = True</strong> : 是否在导航条显示页面信息</p>
+<p><strong>DISPLAY_PAGES_ON_MENU = True</strong> : 是否在导航条显示页面信息；</p>
 </li>
 <li>
-<p><strong>DISPLAY_CATEGORIES_ON_MENU = True</strong> : 是否在导航条显示分类</p>
+<p><strong>DISPLAY_CATEGORIES_ON_MENU = True</strong> : 是否在导航条显示分类；</p>
 </li>
 <li>
-<p><strong>DEFAULT_DATE = None</strong> : 获取默认时间，如果设置为<strong>'fs'</strong>，Pelican就会使用文件系统的时间</p>
+<p><strong>DEFAULT_DATE = None</strong> : 获取默认时间，如果设置为<strong>'fs'</strong>，Pelican就会使用文件系统的时间；</p>
 </li>
 <li>
-<p><strong>DEFAULT_METADATA = {}</strong> : 默认的元数据</p>
+<p><strong>DEFAULT_METADATA = {}</strong> : 默认的元数据；</p>
 </li>
 <li>
 <p><strong>DOCUTILS_SETTINGS = {}</strong> : 这个设置不太懂</p>
 </li>
 <li>
-<p><strong>FILENAME_METADATA = '(?P<date>\d{4}-\d{2}-\d{2}).*'</strong> : 根据文件名称设置元数据</p>
+<p><strong>FILENAME_METADATA = '(?P<date>\d{4}-\d{2}-\d{2}).*'</strong> : 根据文件名称设置元数据；</p>
 </li>
 <li>
-<p><strong>PATH_METADATA = ''</strong> : 和<strong>FILENAME_METADATA</strong>类似，基于路径设置元数据</p>
+<p><strong>PATH_METADATA = ''</strong> : 和<strong>FILENAME_METADATA</strong>类似，基于路径设置元数据；</p>
 </li>
 <li>
-<p><strong>EXTRA_PATH_METADATA = {}</strong></p>
+<p><strong>EXTRA_PATH_METADATA = {}</strong> : </p>
+</li>
+<li>
+<p><strong>DELETE_OUTPUT_DIRECTORY = False</strong> : 是否删除output目录，这是一个危险的设置，谨慎使用；</p>
+</li>
+<li>
+<p><strong>OUTPUT_RETENTION = []</strong> : 如果设置了<strong>DELETE_OUTPUT_DIRECTORY</strong>，可以通过这个设置防着一些文件被删除；</p>
+</li>
+<li>
+<p><strong>JINJA_EXTENSIONS = []</strong> : Jinjia的扩展目录</p>
+</li>
+<li>
+<p><strong>JINJA_FILTERS = {}</strong> : </p>
+</li>
+<li>
+<p><strong>LOCALE</strong> : 修改本地目录，</p>
+</li>
+<li>
+<p><strong>LOG_FILTER = []</strong> : 日志目录；</p>
+</li>
+<li>
+<p><strong>READERS = {}</strong> : </p>
+</li>
+<li>
+<p><strong>IGNORE_FILES = ['.#*']</strong></p>
+</li>
+<li>
+<p><strong>MD_EXTENSIONS = ['codehilite(css_class=highlight)','extra']</strong></p>
+</li>
+<li>
+<p><strong>OUTPUT_PATH = 'output/'</strong> : 生成文件的输出目录；</p>
+</li>
+<li>
+<p><strong>PATH</strong> : </p>
+</li>
+<li>
+<p><strong>PAGE_PATHS = ['pages']</strong></p>
+</li>
+<li>
+<p><strong>PAGE_EXCLUDES = []</strong></p>
+</li>
+<li>
+<p><strong>ARTICLE_PATHS = ['']</strong></p>
+</li>
+<li>
+<p><strong>ARTICLE_EXCLUDES = []</strong></p>
+</li>
+<li>
+<p><strong>OUTPUT_SOURCES = False</strong></p>
+</li>
+<li>
+<p><strong>OUTPUT_SOURCES_EXTENSION = '.text'</strong></p>
+</li>
+<li>
+<p><strong>RELATIVE_URLS = False</strong> : </p>
+</li>
+<li>
+<p><strong>PLUGINS = []</strong></p>
+</li>
+<li>
+<p><strong>PLUGIN_PATHS = []</strong></p>
+</li>
+<li>
+<p><strong>SITENAME = 'A Pelican Blog'</strong></p>
+</li>
+<li>
+<p><strong>SITEURL</strong></p>
+</li>
+<li>
+<p><strong>TEMPLATE_PAGES = None</strong></p>
+</li>
+<li>
+<p><strong>STATIC_PATHS = ['images']</strong></p>
+</li>
+<li>
+<p><strong>STATIC_EXCLUDES = []</strong></p>
+</li>
+<li>
+<p><strong>STATIC_EXCLUDE_SOURCES = True</strong></p>
+</li>
+<li>
+<p><strong>TIMEZONE</strong> : </p>
+</li>
+<li>
+<p><strong>TYPOGRIFY = False</strong></p>
+</li>
+<li>
+<p><strong>TYPOGRIFY_IGNORE_TAGS = []</strong></p>
+</li>
+<li>
+<p><strong>DIRECT_TEMPLATES = ['index', 'categories', 'authors', 'archives']</strong></p>
+</li>
+<li>
+<p><strong>PAGINATED_DIRECT_TEMPLATES = ['index']</strong></p>
+</li>
+<li>
+<p><strong>SUMMARY_MAX_LENGTH = 50</strong></p>
+</li>
+<li>
+<p><strong>EXTRA_TEMPLATES_PATHS = []</strong></p>
+</li>
+<li>
+<p><strong>WITH_FUTURE_DATES = True</strong></p>
+</li>
+<li>
+<p><strong>INTRASITE_LINK_REGEX = '<a href="?P&lt;what&gt;.*?">{|</a>[|}]'</strong></p>
+</li>
+<li>
+<p><strong>PYGMENTS_RST_OPTIONS = []</strong></p>
+</li>
+<li>
+<p><strong>SLUGIFY_SOURCE = 'title'</strong></p>
+</li>
+<li>
+<p><strong>CACHE_CONTENT = False</strong></p>
+</li>
+<li>
+<p><strong>CONTENT_CACHING_LAYER = 'reader'</strong></p>
+</li>
+<li>
+<p><strong>CACHE_PATH = 'cache'</strong></p>
+</li>
+<li>
+<p><strong>GZIP_CACHE = True</strong></p>
+</li>
+<li>
+<p><strong>CHECK_MODIFIED_METHOD = 'mtime'</strong></p>
+</li>
+<li>
+<p><strong>LOAD_CONTENT_CACHE = False</strong></p>
+</li>
+<li>
+<p><strong>WRITE_SELECTED = []</strong></p>
+</li>
+<li>
+<p><strong>FORMATTED_FIELDS = ['summary']</strong></p>
 </li>
 </ul>
+<h3>URL 设置</h3>
+<p>首先我们需要理解的是目前URL的两种形式：相对URL和绝对URL，相对URL主要用于本地预览，
+绝对URL主要用在发布博客上面</p>
             </div>
             <!-- /.entry-content -->
         </article>
