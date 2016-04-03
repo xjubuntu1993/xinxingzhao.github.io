@@ -296,7 +296,51 @@
 </ul>
 <h3>URL 设置</h3>
 <p>首先我们需要理解的是目前URL的两种形式：相对URL和绝对URL，相对URL主要用于本地预览，
-绝对URL主要用在发布博客上面</p>
+绝对URL主要用在发布博客上面，Pelican通过两个不同的配置文件设置开发环境下和发布环境
+下的不同的URL模式，使用<strong>pelican-quickstart</strong>创建博客的时候，会生成两个配置文件，
+分别是<strong>pelicanconf.py</strong>和<strong>publishconf.py</strong>，当然这个是针对自己有服务器的，如果是
+使用GitHub来发布博客的话，<strong>pelicanconf.py</strong>就够了。</p>
+<p>我们可以通过<em>_URL和</em>_SAVE_AS来定制URL，这些配置的值能让我们自己决定我们的文章放在
+那个目录下面，在不同的目录下面决定了我们的URL也是不一样的。</p>
+<p>温馨提示： 如果希望目录是按时间来设置的，首先使用的是文章的<strong>Date</strong>属性，如果这个
+属性没有设置，将使用文件的<strong>mtime</strong>属性，可以通过Python的
+<a href="http://docs.python.org/2/library/datetime.html#strftime-and-strptime-behavior">datetime</a>
+模块了解详情。</p>
+<p>同时可以使用其他的元数据信息来设置URL</p>
+<ul>
+<li>
+<p>slug</p>
+</li>
+<li>
+<p>date</p>
+</li>
+<li>
+<p>lang</p>
+</li>
+<li>
+<p>author</p>
+</li>
+<li>
+<p>category</p>
+</li>
+</ul>
+<p>下面给出几个例子</p>
+<ul>
+<li>
+<p>ARTICLE_URL = 'posts/{date:%Y}/{date:%b}/{date:%d}/{slug}/'</p>
+</li>
+<li>
+<p>ARTICLE_SAVE_AS = 'posts/{date:%Y}/{date:%b}/{date:%d}/{slug}/index.html'</p>
+</li>
+<li>
+<p>PAGE_URL = 'pages/{slug}/'</p>
+</li>
+<li>
+<p>PAGE_SAVE_AS = 'pages/{slug}/index.html'</p>
+</li>
+</ul>
+<p>这样发布出的博客文章的链接类似于：/posts/2011/Aug/07/sample-post/index.html，
+页面的链接类似于： /pages/about/index.html</p>
             </div>
             <!-- /.entry-content -->
         </article>
