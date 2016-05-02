@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
 <head>
-    <title>Authors - 好吧，我现在胡说了</title>
+    <title>Python内置函数总结 - 好吧，我现在胡说了</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -9,15 +9,22 @@
 
 
 
+<link rel="canonical" href="/blog/2016/04/04/python-built-in-function.html">
 
         <meta name="author" content="xinxingzhao" />
+        <meta name="keywords" content="Python,Fucntion" />
+        <meta name="description" content="Python给我们提供了一些内置的函数，方便我们在开发中使用，这些函数一般都相对简单。 现在进行一个简单的总结。 Python版本: 2.7.11 abs(x) 求一个值的绝对值，参数必须是数字，不能是字符串或者是其他类型。 print(abs(1)) print(abs(0)) print(abs(-1)) all(iterable) 检测iterable中如果全是True，则返回True，如果有一个False则返回False，类似于下面 的实现。 def all(iterable): for element in iterable: if not element: return False return True" />
 
-    <!-- Open Graph tags -->
         <meta property="og:site_name" content="好吧，我现在胡说了" />
-        <meta property="og:type" content="website"/>
-        <meta property="og:title" content="好吧，我现在胡说了"/>
-        <meta property="og:url" content=""/>
-        <meta property="og:description" content="好吧，我现在胡说了"/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Python内置函数总结"/>
+        <meta property="og:url" content="/blog/2016/04/04/python-built-in-function.html"/>
+        <meta property="og:description" content="Python给我们提供了一些内置的函数，方便我们在开发中使用，这些函数一般都相对简单。 现在进行一个简单的总结。 Python版本: 2.7.11 abs(x) 求一个值的绝对值，参数必须是数字，不能是字符串或者是其他类型。 print(abs(1)) print(abs(0)) print(abs(-1)) all(iterable) 检测iterable中如果全是True，则返回True，如果有一个False则返回False，类似于下面 的实现。 def all(iterable): for element in iterable: if not element: return False return True"/>
+        <meta property="article:published_time" content="2016-04-04" />
+            <meta property="article:section" content="Python" />
+            <meta property="article:tag" content="Python" />
+            <meta property="article:tag" content="Fucntion" />
+            <meta property="article:author" content="xinxingzhao" />
 
 
     <!-- Bootstrap -->
@@ -60,7 +67,7 @@
                         <li >
                             <a href="/category/pelican.html">Pelican</a>
                         </li>
-                        <li >
+                        <li class="active">
                             <a href="/category/python.html">Python</a>
                         </li>
             </ul>
@@ -76,8 +83,62 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-9">
-    <h1>Authors on 好吧，我现在胡说了</h1>
-        <li><a href="/author/xinxingzhao.html">xinxingzhao</a> (11)</li>
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="/blog/2016/04/04/python-built-in-function.html"
+                       rel="bookmark"
+                       title="Permalink to Python内置函数总结">
+                        Python内置函数总结
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2016-04-04T00:00:00+08:00"> 2016-04-04</time>
+    </span>
+
+
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="/tag/python.html">Python</a>
+        /
+	<a href="/tag/fucntion.html">Fucntion</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p>Python给我们提供了一些内置的函数，方便我们在开发中使用，这些函数一般都相对简单。
+现在进行一个简单的总结。</p>
+<p>Python版本: 2.7.11</p>
+<h3>abs(x)</h3>
+<p>求一个值的绝对值，参数必须是数字，不能是字符串或者是其他类型。</p>
+<div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+</pre></div>
+
+
+<h3>all(iterable)</h3>
+<p>检测iterable中如果全是True，则返回True，如果有一个False则返回False，类似于下面
+的实现。</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">all</span><span class="p">(</span><span class="n">iterable</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">iterable</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">element</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">False</span>
+    <span class="k">return</span> <span class="bp">True</span>
+</pre></div>
+            </div>
+            <!-- /.entry-content -->
+        </article>
+    </section>
+
         </div>
         <div class="col-sm-3" id="sidebar">
             <aside>

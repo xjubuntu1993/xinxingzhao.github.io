@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
 <head>
-    <title>Authors - 好吧，我现在胡说了</title>
+    <title>Python - 好吧，我现在胡说了</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -10,7 +10,8 @@
 
 
 
-        <meta name="author" content="xinxingzhao" />
+    <meta name="author" content="xinxingzhao" />
+    <meta name="keywords" content="Python" />
 
     <!-- Open Graph tags -->
         <meta property="og:site_name" content="好吧，我现在胡说了" />
@@ -76,8 +77,60 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-9">
-    <h1>Authors on 好吧，我现在胡说了</h1>
-        <li><a href="/author/xinxingzhao.html">xinxingzhao</a> (11)</li>
+            <article>
+                <h2><a href="/blog/2016/04/04/python-built-in-function.html">Python内置函数总结</a></h2>
+                <div class="summary"><p>Python给我们提供了一些内置的函数，方便我们在开发中使用，这些函数一般都相对简单。
+现在进行一个简单的总结。</p>
+<p>Python版本: 2.7.11</p>
+<h3>abs(x)</h3>
+<p>求一个值的绝对值，参数必须是数字，不能是字符串或者是其他类型。</p>
+<div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+</pre></div>
+
+
+<h3>all(iterable)</h3>
+<p>检测iterable中如果全是True，则返回True，如果有一个False则返回False，类似于下面
+的实现。</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">all</span><span class="p">(</span><span class="n">iterable</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">iterable</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">element</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">False</span>
+    <span class="k">return</span> <span class="bp">True</span>
+</pre></div>
+                    <a class="btn btn-default btn-xs" href="/blog/2016/04/04/python-built-in-function.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="/blog/2016/04/04/python-string.html">Python字符串全面总结</a></h2>
+                <div class="summary"><h3>前言</h3>
+<p>字符串是在编码过程中处理得最频繁的数据结构，Python为字符串提供了丰富的字符串处理的功能。</p>
+<h3>字符串格式化</h3>
+<p>在字符串中插入<strong>%</strong>开头的字符，如果<strong>%</strong>后面跟的是<strong>S</strong>则表示是字符。</p>
+<div class="highlight"><pre><span></span><span class="n">world</span> <span class="o">=</span> <span class="s2">&quot;world&quot;</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Hello, </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">world</span><span class="p">)</span>
+</pre></div>
+
+
+<p>如果是数字，则<strong>%</strong>后面跟的是d，同时会自动四舍五入，去掉小数点之后的数据。</p>
+<div class="highlight"><pre><span></span><span class="n">str1</span> <span class="o">=</span> <span class="s2">&quot;version&quot;</span>
+<span class="n">nu</span> <span class="o">=</span> <span class="mf">1.0</span>
+<span class="n">format</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> </span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">nu</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">format</span><span class="p">)</span>
+</pre></div>
+
+
+<p>浮点型后面跟的<strong>f</strong>默认情况下会保留六位小数，也可以指定小数点位数。</p>
+<div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s2">&quot;浮点型: </span><span class="si">%f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="mf">1.25</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;浮点型保留一位小数: </span><span class="si">%.1f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="mf">1.25</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;浮点型保留两位小数: </span><span class="si">%.2f ...</span></pre></div>
+                    <a class="btn btn-default btn-xs" href="/blog/2016/04/04/python-string.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+
         </div>
         <div class="col-sm-3" id="sidebar">
             <aside>
