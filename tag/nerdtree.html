@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
 <head>
-    <title>Categories - 好吧，我现在胡说了</title>
+    <title>NERDTree - 好吧，我现在胡说了</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -10,7 +10,8 @@
 
 
 
-        <meta name="author" content="xinxingzhao" />
+    <meta name="author" content="xinxingzhao" />
+    <meta name="keywords" content="NERDTree" />
 
     <!-- Open Graph tags -->
         <meta property="og:site_name" content="好吧，我现在胡说了" />
@@ -79,81 +80,31 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-9">
-    <section id="categories">
-        <h1>All Categories for 好吧，我现在胡说了</h1>
-        <div class="panel-group" id="accordion">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse-blog">Blog <span class="badge pull-right">2</span></a>
-                    </h4>
+            <article>
+                <h2><a href="/blog/2016/05/15/vim-NERDTree.html">上古神器vim插件：你真的学会用NERDTree了吗？</a></h2>
+                <div class="summary"><p>我是一个vimer，还在用着这个上古时代的编辑器，但我并不是守旧派，因为即使是
+现在，vim也在不断的创新。我用vim也有一两年的光景了，但是我还是不敢我自己
+精通vim，当然我使用vim基本是两个地方，一个是修改系统的配置文件，一个就是
+写Python的时候，至于用来写Java我还没有达到这么强大的驾驭能力。在使用Eclipse
+的时候还是感觉用起来非常的不习惯，因为我需要不断的去找鼠标，这让我非常的别扭。
+而vim可以让我基本不用离开我的大键盘就完成我的编辑工作。</p>
+<p>相信所有使用vim的同学都知道文件管理插件NERDTree，这个几乎是所有拥护vim的开发人员
+都会使用的插件，可是我在刚开始使用的时候，完全用错了这个插件，使用起来反而是
+负担了。今天就总结一下如何优雅的使用NERDTree。</p>
+<h3>安装和基本用法</h3>
+<p>安装插件建议使用<a href="https://github.com/VundleVim/Vundle.vim">Vundle</a>进行安装，
+Vundle的用法很简单，可以到GitHub上面查看。</p>
+<p>在NERDTree操作区的一些基本操作：</p>
+<div class="highlight"><pre><span></span>?: 快速帮助文档
+o: 打开一个目录或者打开文件，创建的是buffer，也可以用来打开书签
+go: 打开一个文件，但是光标仍然留在NERDTree，创建的是buffer
+t: 打开一个文件，创建的是Tab，对书签同样生效
+T: 打开一个文件，但是光标仍然留在NERDTree ...</pre></div>
+                    <a class="btn btn-default btn-xs" href="/blog/2016/05/15/vim-NERDTree.html">more ...</a>
                 </div>
-                <div id="collapse-blog" class="panel-collapse collapse">
-                    <div class="panel-body">
-                        <p><span class="categories-timestamp"><time datetime="2016-05-14T00:00:00+08:00">2016-05-14</time></span> <a href="/blog/2016/05/14/say-goodby-to-baidu.html">我是如何和百度说拜拜的</a></p>
-                        <p><span class="categories-timestamp"><time datetime="2016-03-22T00:00:00+08:00">2016-03-22</time></span> <a href="/blog/2016/03/22/has-read-book-of-2016.html">2016年已完成的读书</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse-linux">Linux <span class="badge pull-right">2</span></a>
-                    </h4>
-                </div>
-                <div id="collapse-linux" class="panel-collapse collapse">
-                    <div class="panel-body">
-                        <p><span class="categories-timestamp"><time datetime="2016-03-23T00:00:00+08:00">2016-03-23</time></span> <a href="/blog/2016/03/23/ubuntu-cansel-alt.html">Ubuntu 取消Alt键调出搜索框</a></p>
-                        <p><span class="categories-timestamp"><time datetime="2016-03-17T00:00:00+08:00">2016-03-17</time></span> <a href="/blog/2016/03/17/linux-alias.html">linux添加命令别名</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse-pelican">Pelican <span class="badge pull-right">6</span></a>
-                    </h4>
-                </div>
-                <div id="collapse-pelican" class="panel-collapse collapse">
-                    <div class="panel-body">
-                        <p><span class="categories-timestamp"><time datetime="2016-03-31T00:00:00+08:00">2016-03-31</time></span> <a href="/blog/2016/03/31/pelican-setting.html">Pelican系列:个性化设置</a></p>
-                        <p><span class="categories-timestamp"><time datetime="2016-03-29T00:00:00+08:00">2016-03-29</time></span> <a href="/blog/2016/03/29/pelican-pulish-your-site.html">Pelican系列:生成博客，预览博客，将博客发布到GitHub，绑定域名</a></p>
-                        <p><span class="categories-timestamp"><time datetime="2016-03-25T00:00:00+08:00">2016-03-25</time></span> <a href="/blog/2016/03/25/pelican-installing.html">Pelican系列:安装和升级Pelican</a></p>
-                        <p><span class="categories-timestamp"><time datetime="2016-03-25T00:00:00+08:00">2016-03-25</time></span> <a href="/blog/2016/03/25/pelican-writing-content.html">Pelican系列:开启写作人生</a></p>
-                        <p><span class="categories-timestamp"><time datetime="2016-03-24T00:00:00+08:00">2016-03-24</time></span> <a href="/blog/2016/03/24/pelican-quickstart.html">Pelican系列:快速开始搭建自己的静态博客</a></p>
-                        <p><span class="categories-timestamp"><time datetime="2016-03-16T00:00:00+08:00">2016-03-16</time></span> <a href="/blog/2016/03/16/create-my-blog.html">Pelican系列:用Pelican和GitHub Pages搭建免费的个人博客文章导航</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse-python">Python <span class="badge pull-right">2</span></a>
-                    </h4>
-                </div>
-                <div id="collapse-python" class="panel-collapse collapse">
-                    <div class="panel-body">
-                        <p><span class="categories-timestamp"><time datetime="2016-04-04T00:00:00+08:00">2016-04-04</time></span> <a href="/blog/2016/04/04/python-built-in-function.html">Python内置函数总结</a></p>
-                        <p><span class="categories-timestamp"><time datetime="2016-04-04T00:00:00+08:00">2016-04-04</time></span> <a href="/blog/2016/04/04/python-string.html">Python字符串全面总结</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse-vim">Vim <span class="badge pull-right">2</span></a>
-                    </h4>
-                </div>
-                <div id="collapse-vim" class="panel-collapse collapse">
-                    <div class="panel-body">
-                        <p><span class="categories-timestamp"><time datetime="2016-05-15T00:00:00+08:00">2016-05-15</time></span> <a href="/blog/2016/05/15/vim-NERDTree.html">上古神器vim插件：你真的学会用NERDTree了吗？</a></p>
-                        <p><span class="categories-timestamp"><time datetime="2016-05-07T00:00:00+08:00">2016-05-07</time></span> <a href="/blog/2016/05/07/base-user-vim-buffer.html">vim使用技巧：buffer的基本用法</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
+            </article>
+            <hr/>
 
-    </section>
         </div>
         <div class="col-sm-3" id="sidebar">
             <aside>
