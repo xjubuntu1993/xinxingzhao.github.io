@@ -81,6 +81,46 @@
     <div class="row">
         <div class="col-sm-9">
             <article>
+                <h2><a href="/blog/2016/05/17/python-qrcode.html">使用Python生成二维码</a></h2>
+                <div class="summary"><p>现在有很多二维码的生成工具，在线的，或者安装的软件，都可以进行生成
+二维码。今天我用Python的<a href="https://github.com/lincolnloop/python-qrcode">qrcode</a>
+生成二维码。</p>
+<h3>安装</h3>
+<p>用pip安装</p>
+<div class="highlight"><pre><span></span>pip install qrcode
+</pre></div>
+
+
+<p>使用源码安装</p>
+<div class="highlight"><pre><span></span>git clone git@github.com:lincolnloop/python-qrcode.git
+cd python-qrcode
+python setup.py install
+</pre></div>
+
+
+<p>查看安装信息</p>
+<div class="highlight"><pre><span></span>pip show qrcode
+</pre></div>
+
+
+<h3>命令行</h3>
+<p>qrcode提供了生成二维码的命令，这个很符合程序员装逼的风格。</p>
+<div class="highlight"><pre><span></span>qr &#39;Some data&#39; &gt; test.png
+</pre></div>
+
+
+<p>我的简书上传的二维码就是用这个命令生成的</p>
+<p><img alt="我的二维码" src="http://ww1.sinaimg.cn/mw690/006sube2gw1f3y3w2lap8j309c08974r.jpg" /></p>
+<h3>代码生成</h3>
+<p>首先需要导入qrcode模块，然后调用make方法，会生成一个图片对象，调用图片对象
+的save方法就可以将生成的二维码保存下来了。</p>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">qrcode</span>
+<span class="n">img ...</span></pre></div>
+                    <a class="btn btn-default btn-xs" href="/blog/2016/05/17/python-qrcode.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
                 <h2><a href="/blog/2016/04/04/python-built-in-function.html">Python内置函数总结</a></h2>
                 <div class="summary"><p>Python给我们提供了一些内置的函数，方便我们在开发中使用，这些函数一般都相对简单。
 现在进行一个简单的总结。</p>

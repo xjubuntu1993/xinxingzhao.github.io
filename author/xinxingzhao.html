@@ -80,6 +80,46 @@
     <div class="row">
         <div class="col-sm-9">
             <article>
+                <h2><a href="/blog/2016/05/17/python-qrcode.html">使用Python生成二维码</a></h2>
+                <div class="summary"><p>现在有很多二维码的生成工具，在线的，或者安装的软件，都可以进行生成
+二维码。今天我用Python的<a href="https://github.com/lincolnloop/python-qrcode">qrcode</a>
+生成二维码。</p>
+<h3>安装</h3>
+<p>用pip安装</p>
+<div class="highlight"><pre><span></span>pip install qrcode
+</pre></div>
+
+
+<p>使用源码安装</p>
+<div class="highlight"><pre><span></span>git clone git@github.com:lincolnloop/python-qrcode.git
+cd python-qrcode
+python setup.py install
+</pre></div>
+
+
+<p>查看安装信息</p>
+<div class="highlight"><pre><span></span>pip show qrcode
+</pre></div>
+
+
+<h3>命令行</h3>
+<p>qrcode提供了生成二维码的命令，这个很符合程序员装逼的风格。</p>
+<div class="highlight"><pre><span></span>qr &#39;Some data&#39; &gt; test.png
+</pre></div>
+
+
+<p>我的简书上传的二维码就是用这个命令生成的</p>
+<p><img alt="我的二维码" src="http://ww1.sinaimg.cn/mw690/006sube2gw1f3y3w2lap8j309c08974r.jpg" /></p>
+<h3>代码生成</h3>
+<p>首先需要导入qrcode模块，然后调用make方法，会生成一个图片对象，调用图片对象
+的save方法就可以将生成的二维码保存下来了。</p>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">qrcode</span>
+<span class="n">img ...</span></pre></div>
+                    <a class="btn btn-default btn-xs" href="/blog/2016/05/17/python-qrcode.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
                 <h2><a href="/blog/2016/05/15/vim-NERDTree.html">上古神器vim插件：你真的学会用NERDTree了吗？</a></h2>
                 <div class="summary"><p>我是一个vimer，还在用着这个上古时代的编辑器，但我并不是守旧派，因为即使是
 现在，vim也在不断的创新。我用vim也有一两年的光景了，但是我还是不敢我自己
@@ -338,30 +378,6 @@ source bin/activate
 <p>多个标签(tags)和多个作者(authors)可以用逗号分割。</p>
 <div class="highlight"><pre><span></span><span class="nd">:tags</span><span class="o">:</span> <span class="nt">pelican ...</span></pre></div>
                     <a class="btn btn-default btn-xs" href="/blog/2016/03/25/pelican-writing-content.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="/blog/2016/03/24/pelican-quickstart.html">Pelican系列:快速开始搭建自己的静态博客</a></h2>
-                <div class="summary"><h3>前言</h3>
-<p>一直想搞一个自己的博客，也想耍耍酷，不管访问量怎么样，总感觉自己很了不起。当然写博客是一件很苦的
-事情，能坚持下来也是很苦的事情的。自己肚子里没什么货，写出来的东西也没啥深度，所以要经营好一个博
-客是需要相当大的毅力，特别佩服那些能把自己的博客捯饬得那么好的博主。</p>
-<p>所以从今天开始我也要好好的收拾自己的博客，域名也买了有一段时间了。最开始的时候我用的是Octopress，
-是用Ruby写的，写了两篇文章便没有再坚持。最近有重新找了Pelican，用Python写的，搞Python开发还是用
-自己熟悉的语言比较好吧。</p>
-<p>现在问题来了，打算好好的写博客，但是不知道写啥，仔细读了Pelican的文档，决定根据Pelican的文档写一
-个完整的Pelican博客搭建教程。当然了，我们在搭建博客之前要先来说说写博客的好处：</p>
-<ul>
-<li>我本身是做开发的，写博客对技术水平有很大的提高。</li>
-<li>最近买了kindle，就是为了好好读书，可是不能光读书啊，有什么想法还是要记录下来的。</li>
-<li>我的文采呢一直都很差，写写博客可以提高自己的文采，也能锻炼自己的语言组织能力。</li>
-</ul>
-<p>说了那么多，下面我们就要开始搭建自己的博客了。内容我都是参考Pelican的文档写的，我英语比较差，就
-勉勉强强的根据文档的翻译一下了。</p>
-<h3>Pelican 安装</h3>
-<p>安装Pelican需要本机安装Python 2.7 ...</p>
-                    <a class="btn btn-default btn-xs" href="/blog/2016/03/24/pelican-quickstart.html">more ...</a>
                 </div>
             </article>
             <hr/>
