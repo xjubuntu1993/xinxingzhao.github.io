@@ -81,6 +81,39 @@
     <div class="row">
         <div class="col-sm-9">
             <article>
+                <h2><a href="/blog/2016/05/17/vim-set-cursorcolumn-curcorline.html">VIM配置高亮光标所在行和所在列</a></h2>
+                <div class="summary"><p>使用vim在写东西的时候，要经常移动光标，但是光标太小了，跳
+来跳去有时候不知道跳都什么地方去了，所以如果可以高亮光标所
+在的行列，这样不管光标怎么移动都能轻松的找到，是不是很cool。
+先上个图过个瘾。</p>
+<p><img alt="高亮光标所在行列" src="http://ww1.sinaimg.cn/mw690/006sube2jw1f3zp11vaenj30l603pgmx.jpg" /></p>
+<h3>基本设置</h3>
+<p>设置高亮行和列有两种方式进行设置</p>
+<div class="highlight"><pre><span></span>set cursorcolumn
+set cursorline
+
+&quot; or
+
+set cuc
+set cul
+</pre></div>
+
+
+<p>我建议使用第一种方式，这样可以看到配置就能知道是干什么用的了，
+同时再加上注释，因为随着配置越来越多，最后自己可能都忘了这些
+配置是用来干嘛的了。我们看一下效果图</p>
+<p><img alt="初步效果" src="http://ww3.sinaimg.cn/mw690/006sube2jw1f3ztr4p2ngj308e03hmx8.jpg" /></p>
+<h3>美化</h3>
+<p>我们现在已经能快速的分别光标所在的位置了，但是离我们最终需要的
+效果还差一些，因为当前行是一条横线，所以有时候很难区分英文的逗号
+和句号，在这个基础上我们需要加入一下配置</p>
+<div class="highlight"><pre><span></span>highlight CursorLine   cterm=NONE ctermbg=black ctermfg=green guibg=NONE guifg=NONE
+highlight CursorColumn ...</pre></div>
+                    <a class="btn btn-default btn-xs" href="/blog/2016/05/17/vim-set-cursorcolumn-curcorline.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
                 <h2><a href="/blog/2016/05/15/vim-NERDTree.html">上古神器vim插件：你真的学会用NERDTree了吗？</a></h2>
                 <div class="summary"><p>我是一个vimer，还在用着这个上古时代的编辑器，但我并不是守旧派，因为即使是
 现在，vim也在不断的创新。我用vim也有一两年的光景了，但是我还是不敢我自己

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
 <head>
-    <title>Vim - 好吧，我现在胡说了</title>
+    <title>VIM配置高亮光标所在行和所在列 - 好吧，我现在胡说了</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -9,16 +9,21 @@
 
 
 
+<link rel="canonical" href="/blog/2016/05/17/vim-set-cursorcolumn-curcorline.html">
 
-    <meta name="author" content="xinxingzhao" />
-    <meta name="keywords" content="Vim" />
+        <meta name="author" content="xinxingzhao" />
+        <meta name="keywords" content="Vim" />
+        <meta name="description" content="使用vim在写东西的时候，要经常移动光标，但是光标太小了，跳 来跳去有时候不知道跳都什么地方去了，所以如果可以高亮光标所 在的行列，这样不管光标怎么移动都能轻松的找到，是不是很cool。 先上个图过个瘾。 基本设置 设置高亮行和列有两种方式进行设置 set cursorcolumn set cursorline &#34; or set cuc set cul 我建议使用第一种方式，这样可以看到配置就能知道是干什么用的了， 同时再加上注释，因为随着配置越来越多，最后自己可能都忘了这些 配置是用来干嘛的了。我们看一下效果图 美化 我们现在已经能快速的分别光标所在的位置了，但是离我们最终需要的 效果还差一些，因为当前行是一条横线，所以有时候很难区分英文的逗号 和句号，在这个基础上我们需要加入一下配置 highlight CursorLine cterm=NONE ctermbg=black ctermfg=green guibg=NONE guifg=NONE highlight CursorColumn ..." />
 
-    <!-- Open Graph tags -->
         <meta property="og:site_name" content="好吧，我现在胡说了" />
-        <meta property="og:type" content="website"/>
-        <meta property="og:title" content="好吧，我现在胡说了"/>
-        <meta property="og:url" content=""/>
-        <meta property="og:description" content="好吧，我现在胡说了"/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="VIM配置高亮光标所在行和所在列"/>
+        <meta property="og:url" content="/blog/2016/05/17/vim-set-cursorcolumn-curcorline.html"/>
+        <meta property="og:description" content="使用vim在写东西的时候，要经常移动光标，但是光标太小了，跳 来跳去有时候不知道跳都什么地方去了，所以如果可以高亮光标所 在的行列，这样不管光标怎么移动都能轻松的找到，是不是很cool。 先上个图过个瘾。 基本设置 设置高亮行和列有两种方式进行设置 set cursorcolumn set cursorline &#34; or set cuc set cul 我建议使用第一种方式，这样可以看到配置就能知道是干什么用的了， 同时再加上注释，因为随着配置越来越多，最后自己可能都忘了这些 配置是用来干嘛的了。我们看一下效果图 美化 我们现在已经能快速的分别光标所在的位置了，但是离我们最终需要的 效果还差一些，因为当前行是一条横线，所以有时候很难区分英文的逗号 和句号，在这个基础上我们需要加入一下配置 highlight CursorLine cterm=NONE ctermbg=black ctermfg=green guibg=NONE guifg=NONE highlight CursorColumn ..."/>
+        <meta property="article:published_time" content="2016-05-17" />
+            <meta property="article:section" content="Vim" />
+            <meta property="article:tag" content="Vim" />
+            <meta property="article:author" content="xinxingzhao" />
 
 
     <!-- Bootstrap -->
@@ -80,9 +85,36 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-9">
-            <article>
-                <h2><a href="/blog/2016/05/17/vim-set-cursorcolumn-curcorline.html">VIM配置高亮光标所在行和所在列</a></h2>
-                <div class="summary"><p>使用vim在写东西的时候，要经常移动光标，但是光标太小了，跳
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="/blog/2016/05/17/vim-set-cursorcolumn-curcorline.html"
+                       rel="bookmark"
+                       title="Permalink to VIM配置高亮光标所在行和所在列">
+                        VIM配置高亮光标所在行和所在列
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2016-05-17T00:00:00+08:00"> 2016-05-17</time>
+    </span>
+
+
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="/tag/vim.html">Vim</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p>使用vim在写东西的时候，要经常移动光标，但是光标太小了，跳
 来跳去有时候不知道跳都什么地方去了，所以如果可以高亮光标所
 在的行列，这样不管光标怎么移动都能轻松的找到，是不是很cool。
 先上个图过个瘾。</p>
@@ -108,77 +140,29 @@ set cul
 效果还差一些，因为当前行是一条横线，所以有时候很难区分英文的逗号
 和句号，在这个基础上我们需要加入一下配置</p>
 <div class="highlight"><pre><span></span>highlight CursorLine   cterm=NONE ctermbg=black ctermfg=green guibg=NONE guifg=NONE
-highlight CursorColumn ...</pre></div>
-                    <a class="btn btn-default btn-xs" href="/blog/2016/05/17/vim-set-cursorcolumn-curcorline.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="/blog/2016/05/15/vim-NERDTree.html">上古神器vim插件：你真的学会用NERDTree了吗？</a></h2>
-                <div class="summary"><p>我是一个vimer，还在用着这个上古时代的编辑器，但我并不是守旧派，因为即使是
-现在，vim也在不断的创新。我用vim也有一两年的光景了，但是我还是不敢我自己
-精通vim，当然我使用vim基本是两个地方，一个是修改系统的配置文件，一个就是
-写Python的时候，至于用来写Java我还没有达到这么强大的驾驭能力。在使用Eclipse
-的时候还是感觉用起来非常的不习惯，因为我需要不断的去找鼠标，这让我非常的别扭。
-而vim可以让我基本不用离开我的大键盘就完成我的编辑工作。</p>
-<p>相信所有使用vim的同学都知道文件管理插件NERDTree，这个几乎是所有拥护vim的开发人员
-都会使用的插件，可是我在刚开始使用的时候，完全用错了这个插件，使用起来反而是
-负担了。今天就总结一下如何优雅的使用NERDTree。</p>
-<h3>安装和基本用法</h3>
-<p>安装插件建议使用<a href="https://github.com/VundleVim/Vundle.vim">Vundle</a>进行安装，
-Vundle的用法很简单，可以到GitHub上面查看。</p>
-<p>在NERDTree操作区的一些基本操作：</p>
-<div class="highlight"><pre><span></span>?: 快速帮助文档
-o: 打开一个目录或者打开文件，创建的是buffer，也可以用来打开书签
-go: 打开一个文件，但是光标仍然留在NERDTree，创建的是buffer
-t: 打开一个文件，创建的是Tab，对书签同样生效
-T: 打开一个文件，但是光标仍然留在NERDTree ...</pre></div>
-                    <a class="btn btn-default btn-xs" href="/blog/2016/05/15/vim-NERDTree.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="/blog/2016/05/07/base-user-vim-buffer.html">vim使用技巧：buffer的基本用法</a></h2>
-                <div class="summary"><p>vim缓冲区(buffer)的基本用法</p>
-<p>首先用vim打开两个以上的文件</p>
-<div class="highlight"><pre><span></span>vim 1.txt 2.txt
+highlight CursorColumn cterm=NONE ctermbg=black ctermfg=green guibg=NONE guifg=NONE
 </pre></div>
 
 
-<p>显示当前缓存列表</p>
-<div class="highlight"><pre><span></span>:ls
-  1 %a   &quot;1.txt&quot;                        line 2
-  2      &quot;2.txt&quot;                        line 0
-</pre></div>
-
-
-<p>第一列数字是vim自动给buffer分配的编号，第二列中的a表示当前的buffer是被激活，%表明当前buffer是可见的，
-第三列是文件的名称，第四列便是当前光标所在第几行</p>
-<p>切换到下一个buffer</p>
-<div class="highlight"><pre><span></span>:bnext
-:ls
-  1 #    &quot;1.txt&quot;                        line 2
-  2 %a   &quot;2.txt&quot;                        line 2
-</pre></div>
-
-
-<p>"#"表示轮换文件，通过<C-^>可以和激活buffer之间进行切换。</p>
-<p>切换到上一个buffer</p>
-<div class="highlight"><pre><span></span>:bprev
-</pre></div>
-
-
-<p>切换到下一个buffer</p>
-<div class="highlight"><pre><span></span>:bnext
-</pre></div>
-
-
-<p>切换到第一个buffer</p>
-<div class="highlight"><pre><span></span>:bfirst ...</pre></div>
-                    <a class="btn btn-default btn-xs" href="/blog/2016/05/07/base-user-vim-buffer.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
+<p><strong>highlght</strong> 主要是用来配色的，包括语法高亮等个性化的配置。可以通过:h highlight，查看详细信息</p>
+<p><strong>CursorLine</strong>  和 <strong>CursorColumn</strong> 分别表示当前所在的行列</p>
+<p><strong>cterm</strong> 表示为原生vim设置样式，设置为NONE表示可以自定义设置。</p>
+<p><strong>ctermbg</strong> 设置终端vim的背景色</p>
+<p><strong>ctermfg</strong> 设置终端vim的前景色</p>
+<p><strong>guibg</strong> 和 <strong>guifg</strong> 分别是设置gvim的背景色和前景色，本人平时都是使用终端打开
+vim，所以只是设置终端下的样式</p>
+<p>现在配合上终端的颜色就很酷了，顺便说一下自己的感受，vim的学习曲线比较
+陡峭，但是随着对vim的学习深入，编辑效率确实发生了大幅度的提高，最后觉
+得这些付出是值得的。一般学会使用vim之后都会长期的使用，我觉得其中一个
+原因就是难学，因为难学，所以付出了很多，所以越舍不得抛弃，自己编辑器
+的配置都是一行一行慢慢打磨出来的，产生了比较深厚的感情。</p>
+<p>在我开始写vim的文章的时候，才发现其实很多东西我并不是真的懂，而是仅仅知道
+怎么配置而已。当真正要去写的时候才发现不是那么容易就能把一件事情表述清楚的。
+以后慢慢将自己的配置一点一点的分享出来。</p>
+            </div>
+            <!-- /.entry-content -->
+        </article>
+    </section>
 
         </div>
         <div class="col-sm-3" id="sidebar">
