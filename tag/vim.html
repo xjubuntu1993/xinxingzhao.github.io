@@ -81,6 +81,33 @@
     <div class="row">
         <div class="col-sm-9">
             <article>
+                <h2><a href="/blog/2016/05/24/vim-base-settings.html">我的vim常用基础配置，相互参考</a></h2>
+                <div class="summary"><p>一千个vimer有一千个配置，vim的配置其实可当成一门语言来学习，配置复杂性不比学习
+一门语言来得容易，而且自己的配置都是经过长期的打磨的。其实在这个过程中可以不断
+的磨练自己的意志，当到达一定程度的时候，我确实是离不开vim，他不仅帮助我提高了编
+辑速度，而且也不断的受到vim的思想的影响，这种影响不断的深入到我的编程工作中去。
+现代的IDE确实在初期给开发者带来了极大的便利，可是这些IDE从来都不会影响到你的思想。
+当然，我这里不是再给大家洗脑了，vim也确实存在很多弊端，所以导致很多人在使用上
+的困难，虽然有非常完善的文档和强大的社区支持，可是现在谁还有那么多的时间呢？</p>
+<p>好了，下面开始进入正题，我不打算大段大段的贴代码，而且每一个配置都做简单的说明，
+解释一下我为什么要这么配置，当然，将来这些配置可能都会再改进。</p>
+<div class="highlight"><pre><span></span>set number
+set relativenumber
+
+set nu
+set rnu
+</pre></div>
+
+
+<p>上面是行号相关的设置，第一行是设置行号显示，第二行是将行号设置为相对行号。后面的
+设置是他们的简写模式，建议尽量少的使用简写模式，使用完整的配置可以增加配置文件
+的可读性，毕竟看配置文件不只是一次两次。这个配置估计是最流行的了。 <strong>relativenumber</strong>
+将行号设置与当前行的距离，当前行显示绝对行号 ...</p>
+                    <a class="btn btn-default btn-xs" href="/blog/2016/05/24/vim-base-settings.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
                 <h2><a href="/blog/2016/05/17/vim-set-cursorcolumn-curcorline.html">VIM配置高亮光标所在行和所在列</a></h2>
                 <div class="summary"><p>使用vim在写东西的时候，要经常移动光标，但是光标太小了，跳
 来跳去有时候不知道跳都什么地方去了，所以如果可以高亮光标所

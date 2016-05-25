@@ -81,6 +81,32 @@
     <div class="row">
         <div class="col-sm-9">
             <article>
+                <h2><a href="/blog/2016/05/23/python-type-vs-isinstance.html">Python中为什么推荐使用isinstance来进行类型判断？而不是type</a></h2>
+                <div class="summary"><p>Python在定义变量的时候不用指明具体的的类型，解释器会在运行的时候会自动检查
+变量的类型，并根据需要进行隐式的类型转化。因为Python是动态语言，所以一般情
+况下是不推荐进行类型转化的。比如"+"操作时，如果加号两边是数据就进行加法操
+作，如果两边是字符串就进行字符串连接操作，如果两边是列表就进行合并操作，甚
+至可以进行复数的运算。解释器会在运行时根据两边的变量的类型调用不同的内部方法。
+当加号两边的变量类型不一样的时候，又不能进行类型转化，就会抛出TypeError的异常。</p>
+<p>但是在实际的开发中，为了提高代码的健壮性，我们还是需要进行类型检查的。而进行
+类型检查首先想到的就是用type()，比如使用type判断一个int类型。</p>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">types</span>
+<span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="ow">is</span> <span class="n">types</span><span class="o">.</span><span class="n">Integer</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;1是int类型&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;1不是int类型&#39;</span><span class="p">)</span>
+</pre></div>
+
+
+<p>上面的程序会输出：1是int类型</p>
+<p>我们在types中可以找到一些常用的类型，在2.7.6中显示的结果：</p>
+<div class="highlight"><pre><span></span><span class="n">types</span><span class="o">.</span><span class="n">BooleanType</span>              <span class="c1">#  bool类型</span>
+<span class="n">types</span><span class="o">.</span><span class="n">BufferType</span>               <span class="c1">#  buffer类型 ...</span></pre></div>
+                    <a class="btn btn-default btn-xs" href="/blog/2016/05/23/python-type-vs-isinstance.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
                 <h2><a href="/blog/2016/05/17/python-qrcode.html">使用Python生成二维码</a></h2>
                 <div class="summary"><p>现在有很多二维码的生成工具，在线的，或者安装的软件，都可以进行生成
 二维码。今天我用Python的<a href="https://github.com/lincolnloop/python-qrcode">qrcode</a>

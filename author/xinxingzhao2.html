@@ -80,6 +80,65 @@
     <div class="row">
         <div class="col-sm-9">
             <article>
+                <h2><a href="/blog/2016/03/29/pelican-pulish-your-site.html">Pelican系列:生成博客，预览博客，将博客发布到GitHub，绑定域名</a></h2>
+                <div class="summary"><h3>网站生成</h3>
+<p>文章写好了，接下来当然是要将写好的文章转化为HTML文件了，Pelican提供了一些命令来帮助我们
+生成HTML文件</p>
+<div class="highlight"><pre><span></span>pelican /path/to/your/content/ [-s path/to/your/settings.py]
+</pre></div>
+
+
+<p>执行上面这条命令之后，生成的HTML代码会被输出到<strong>output/</strong>下面，这个目录也可以在配置文件
+里面进行修改，如果没有配置主题的话，会使用默认的主题。</p>
+<p>如果希望Pelican监听文章的变化，即每次保存文章内容就自动生成了HTML文件，可以在命令里面添
+加参数<strong>-r</strong>或者<strong>--autoreload</strong></p>
+<p>关于其他Pelican详细的命令说明可以查看Pelican的帮助</p>
+<div class="highlight"><pre><span></span>pelican --help
+</pre></div>
+
+
+<h3>预览博客</h3>
+<p>第一种方式就是直接用双击index.html文件，用浏览器打开，还有一种方法当然就是起一个小小服
+务器。</p>
+<p>如果是Python 2</p>
+<div class="highlight"><pre><span></span>cd output
+python -m SimpleHTTPServer
+</pre></div>
+
+
+<p>如果是Python 3</p>
+<div class="highlight"><pre><span></span>cd ...</pre></div>
+                    <a class="btn btn-default btn-xs" href="/blog/2016/03/29/pelican-pulish-your-site.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="/blog/2016/03/25/pelican-installing.html">Pelican系列:安装和升级Pelican</a></h2>
+                <div class="summary"><h3>安装</h3>
+<p>Pelican 目前支持最好的Python版本是2.7.x，早期的版本已经不在支持。3.3+版本暂时是支持的，
+最简单的安装方法是用pip安装。</p>
+<div class="highlight"><pre><span></span>pip install pelican
+</pre></div>
+
+
+<p>在Linux下面如果提示权限问题，就在命令前面添加<strong>sudo</strong>。</p>
+<p>还有一种安装方法就是为Pelican创建一个虚拟的Python环境，安装Pelican之前需要先安装
+<a href="https://virtualenv.pypa.io/en/latest/installation.html">virtualenv</a>，</p>
+<div class="highlight"><pre><span></span>pip install virtualenv
+virtualenv ~/virtualenvs/pelican
+cd ~/virtualenvs/pelican
+source bin/activate
+</pre></div>
+
+
+<p>安装好Python的虚拟环境之后就可以直接用<strong>pip install pelican</strong>安装了，不需要加<strong>sudo</strong>
+权限，如果系统安装git，还可以用源码安装。用源码安装可以安装到最新的版本。</p>
+<div class="highlight"><pre><span></span>git clone git@github.com:getpelican/pelican.git ...</pre></div>
+                    <a class="btn btn-default btn-xs" href="/blog/2016/03/25/pelican-installing.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
                 <h2><a href="/blog/2016/03/25/pelican-writing-content.html">Pelican系列:开启写作人生</a></h2>
                 <div class="summary"><h3>博文和页面的区别</h3>
 <p>Articles: 博文，是指具体写的文章。</p>
