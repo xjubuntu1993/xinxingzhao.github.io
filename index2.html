@@ -80,6 +80,35 @@
     <div class="row">
         <div class="col-sm-9">
             <article>
+                <h2><a href="/blog/2016/03/31/pelican-setting.html">Pelican系列:个性化设置</a></h2>
+                <div class="summary"><p>这部分的详细内容比较多，一点一点慢慢的更新了。</p>
+<p>通过下面的命令可以生成配置文件</p>
+<div class="highlight"><pre><span></span>pelican content -s path/to/your/pelicanconf.py
+</pre></div>
+
+
+<p>如果是使用<strong>pelican-quickstart</strong>创建博客骨架的话，配置文件会自动生成</p>
+<p>温馨提示：如果在实验不同的配置的时候，特别是元数据的配置，可能因为缓存
+的原因而没有发生变化，可以通过配置<strong>LOAD_CONTENT_CACHE = False</strong>或者
+在命令中添加参数<strong>--ignore-cache</strong>处理缓存的问题</p>
+<p>配置文件<strong>pelicanconf.py</strong>所有等号前面的必须是大写的，否则Pelican将
+无法解析配置文件，除了Number，boolean，dictionaries和tuples不需要引号
+因起来，其他类型必须用引号引起来。</p>
+<h3>基础配置</h3>
+<ul>
+<li>
+<p><strong>AUTHOR</strong> : 默认文章作者，可以给自己起个笔名什么的；</p>
+</li>
+<li>
+<p><strong>DATE_FORMATS = {}</strong> : 如果博客是多种语言的，可以为每种语言设置一种日期格式；</p>
+</li>
+<li>
+<p><strong>USE_FOLDER_AS_CATEGORY = True</strong> : 如果在文章里面没有设置<strong>Category</strong>属性 ...</p></li></ul>
+                    <a class="btn btn-default btn-xs" href="/blog/2016/03/31/pelican-setting.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
                 <h2><a href="/blog/2016/03/29/pelican-pulish-your-site.html">Pelican系列:生成博客，预览博客，将博客发布到GitHub，绑定域名</a></h2>
                 <div class="summary"><h3>网站生成</h3>
 <p>文章写好了，接下来当然是要将写好的文章转化为HTML文件了，Pelican提供了一些命令来帮助我们
