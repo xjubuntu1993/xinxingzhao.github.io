@@ -81,6 +81,30 @@
     <div class="row">
         <div class="col-sm-9">
             <article>
+                <h2><a href="/blog/2016/05/29/vim-select-boject.html">vim操作技巧：操作+文本选择</a></h2>
+                <div class="summary"><p>在编写代码的过程中，选择代码是一项非常常见的操作，其他文本编辑器都是
+使用鼠标进行选择，我在使用其他编辑器的时候，编写到一半的时候总是想着
+要去找鼠标，然后选择代码，然后在回到键盘上进行操作。代码选择再加上操
+作，那就非常强大了。</p>
+<p>首先我们需要了解一下什么是文本对象，我对文本对象的理解就是在成对符号
+之间的字符串，比如",',{等，包括xml的标签之间的都属于文本对象。选中文
+我们都是为了操作文本，vim里面有一些按键用于操作，称之为操作符，比如d,
+c,y等，d表示删除，c表示删除插入，y表示提取。</p>
+<p>我们以一个实例来解释文本操作加文本对象的使用。</p>
+<div class="highlight"><pre><span></span>This is a series of commands.
+</pre></div>
+
+
+<p>上面这句话假设光标所在位置是句首，我们想把commands改为hello，我们要完
+成这件事情有很多种方法，下面我们一个一个的来说。</p>
+<p>第一种办法就是用l或者<Right>将光标移动到.上面，然后用i进入插入模式，
+使用<Backspace>删除commands，输入hello，<ESC>退出插入模式。不得不说，
+我在最开始接触vim的时候 ...</esc></backspace></right></p>
+                    <a class="btn btn-default btn-xs" href="/blog/2016/05/29/vim-select-boject.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
                 <h2><a href="/blog/2016/05/26/vim-best-way-get-help.html">如何高效的使用vim的帮助，以前我都错了</a></h2>
                 <div class="summary"><p>在使用vim的过程中，一定会用help，而vim完善的帮助文档也让人惊叹，到目前为止
 我还没没有见过那个项目能把文档写得如此的深入和细致。可是我一直使用help的方式

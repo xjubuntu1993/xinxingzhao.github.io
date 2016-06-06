@@ -80,6 +80,33 @@
     <div class="row">
         <div class="col-sm-9">
             <article>
+                <h2><a href="/blog/2016/04/04/python-string.html">Python字符串全面总结</a></h2>
+                <div class="summary"><h3>前言</h3>
+<p>字符串是在编码过程中处理得最频繁的数据结构，Python为字符串提供了丰富的字符串处理的功能。</p>
+<h3>字符串格式化</h3>
+<p>在字符串中插入<strong>%</strong>开头的字符，如果<strong>%</strong>后面跟的是<strong>S</strong>则表示是字符。</p>
+<div class="highlight"><pre><span></span><span class="n">world</span> <span class="o">=</span> <span class="s2">&quot;world&quot;</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Hello, </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">world</span><span class="p">)</span>
+</pre></div>
+
+
+<p>如果是数字，则<strong>%</strong>后面跟的是d，同时会自动四舍五入，去掉小数点之后的数据。</p>
+<div class="highlight"><pre><span></span><span class="n">str1</span> <span class="o">=</span> <span class="s2">&quot;version&quot;</span>
+<span class="n">nu</span> <span class="o">=</span> <span class="mf">1.0</span>
+<span class="n">format</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> </span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">nu</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">format</span><span class="p">)</span>
+</pre></div>
+
+
+<p>浮点型后面跟的<strong>f</strong>默认情况下会保留六位小数，也可以指定小数点位数。</p>
+<div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s2">&quot;浮点型: </span><span class="si">%f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="mf">1.25</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;浮点型保留一位小数: </span><span class="si">%.1f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="mf">1.25</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;浮点型保留两位小数: </span><span class="si">%.2f ...</span></pre></div>
+                    <a class="btn btn-default btn-xs" href="/blog/2016/04/04/python-string.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
                 <h2><a href="/blog/2016/03/31/pelican-setting.html">Pelican系列:个性化设置</a></h2>
                 <div class="summary"><p>这部分的详细内容比较多，一点一点慢慢的更新了。</p>
 <p>通过下面的命令可以生成配置文件</p>
